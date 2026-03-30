@@ -15,8 +15,8 @@ progress:
 
 ## Current State
 
-- **Phase:** 4
-- **Status:** Planned
+- **Phase:** 5
+- **Status:** Ready to plan
 - **Last updated:** 2026-03-30
 
 ## Project Memory
@@ -33,9 +33,9 @@ progress:
 | 1 | Completed | 3/3 |
 | 2 | Completed | 3/3 |
 | 3 | Completed | 2/2 |
-| 4 | Planned | 0/2 |
+| 4 | Completed | 2/2 |
 | 5 | Not started | — |
 
 ## Next Action
 
-Run: `/gsd-execute-phase 4`
+Run: `/gsd-plan-phase 5`
