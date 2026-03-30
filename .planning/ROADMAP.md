@@ -12,7 +12,7 @@
 | # | Phase | Goal | Requirements | Est. Plans |
 |---|-------|------|--------------|------------|
 | 1 | Foundation & Config | Next.js project set up, brand configured, SEO infrastructure in place | Complete    | 2026-03-30 |
-| 2 | Core Content Sections | Hero + Services + WhyUs + HowItWorks live and visually complete | HERO-01..04, SVC-01..03, WHY-01..02, HOW-01..02 | 3 |
+| 2 | Core Content Sections | Hero + Services + WhyUs + HowItWorks live and visually complete | Complete    | 2026-03-30 |
 | 3 | Trust & Pricing Sections | Pricing, Testimonials, Partners, About sections live | PRICE-01..03, TEST-01..03, PART-01..02, ABOUT-01..03 | 2 |
 | 4 | Lead Capture & Polish | Contact form working, animations, responsive, mobile-optimized | CONT-01..04, RESP-01..04, ANIM-01..04 | 3 |
 | 5 | Performance & Launch | Lighthouse green, Privacy Policy, static build clean, ready to deploy | PERF-01..05, Privacy page | 2 |
@@ -55,7 +55,7 @@
 - HOW-01, HOW-02
 
 **Plans:**
-1. **Hero Section** — H1 keyword-rich ("Dịch vụ Vệ Sinh Công Nghiệp Đà Nẵng"), tagline "Sạch Chuẩn — Nhanh Gọn — An Tâm", hero visual (gradient bg hoặc placeholder ảnh WebP), dual CTA (gọi ngay + báo giá), badge "100+ khách hàng"
+0/3 plans complete
 2. **Services Section** — Grid 5 service cards (icon SVG + tên + mô tả 2 câu + CTA link), section ID `#dich-vu`, responsive (1 cột mobile → 2 → 3)
 3. **WhyUs + HowItWorks** — 6 USP blocks với Lucide icons (Báo giá 30 phút, Hóa chất xanh, Cam kết hoàn tiền, Đội ngũ chuyên nghiệp, Hóa đơn VAT, Phục vụ Đà Nẵng), quy trình 3 bước với icons và descriptions
 

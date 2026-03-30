@@ -15,10 +15,10 @@
 - [ ] **LAYOUT-04**: Floating button Zalo + hotline cố định góc phải màn hình, luôn hiển thị khi scroll
 
 ### HERO — Màn hình đầu tiên
-- [ ] **HERO-01**: Hero section có H1 chứa keyword "vệ sinh công nghiệp Đà Nẵng" và tagline thương hiệu
-- [ ] **HERO-02**: Hero có ảnh/visual minh họa dịch vụ (có thể dùng placeholder ảnh chất lượng cao)
-- [ ] **HERO-03**: Hero có 2 CTA: "Gọi ngay [Hotline]" (primary) và "Báo giá miễn phí" (secondary, scroll to form)
-- [ ] **HERO-04**: Hiển thị badge/counter "100+ khách hàng tin dùng" hoặc tương đương trên hero
+- [x] **HERO-01**: Hero section có H1 chứa keyword "vệ sinh công nghiệp Đà Nẵng" và tagline thương hiệu
+- [x] **HERO-02**: Hero có ảnh/visual minh họa dịch vụ (có thể dùng placeholder ảnh chất lượng cao)
+- [x] **HERO-03**: Hero có 2 CTA: "Gọi ngay [Hotline]" (primary) và "Báo giá miễn phí" (secondary, scroll to form)
+- [x] **HERO-04**: Hiển thị badge/counter "100+ khách hàng tin dùng" hoặc tương đương trên hero
 
 ### SERVICES — 5 Dịch vụ
 - [ ] **SVC-01**: Grid 5 dịch vụ: Vệ sinh văn phòng, Vệ sinh sau xây dựng, Vệ sinh nhà xưởng, Dọn dẹp nhà cửa, Dọn dẹp định kỳ
