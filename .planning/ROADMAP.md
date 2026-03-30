@@ -11,7 +11,7 @@
 
 | # | Phase | Goal | Requirements | Est. Plans |
 |---|-------|------|--------------|------------|
-| 1 | Foundation & Config | Next.js project set up, brand configured, SEO infrastructure in place | FOUND-01..04, LAYOUT-01..04, SEO-01..05 | 3 |
+| 1 | Foundation & Config | Next.js project set up, brand configured, SEO infrastructure in place | Complete    | 2026-03-30 |
 | 2 | Core Content Sections | Hero + Services + WhyUs + HowItWorks live and visually complete | HERO-01..04, SVC-01..03, WHY-01..02, HOW-01..02 | 3 |
 | 3 | Trust & Pricing Sections | Pricing, Testimonials, Partners, About sections live | PRICE-01..03, TEST-01..03, PART-01..02, ABOUT-01..03 | 2 |
 | 4 | Lead Capture & Polish | Contact form working, animations, responsive, mobile-optimized | CONT-01..04, RESP-01..04, ANIM-01..04 | 3 |
@@ -29,7 +29,7 @@
 - SEO-01, SEO-02, SEO-03, SEO-04, SEO-05
 
 **Plans:**
-1. **Project Bootstrap** — `npx create-next-app`, configure `next.config.js` (static export, trailingSlash, image optimization), install all dependencies (Tailwind, Framer Motion, Formspree, Lucide, next-export-optimize-images)
+3/3 plans complete
 2. **Brand & Design System** — Tailwind config with Nhà Xanh brand colors (`#2D8B3A`, `#5AB645`, white, gray), Be Vietnam Pro font setup with preconnect, CSS custom properties, reusable UI primitives (Button, SectionTitle)
 3. **Layout Shell + SEO** — Header (sticky, logo, nav, hotline CTA), Footer (address, hours, social, links), FloatingCTA (Zalo + hotline floating), root metadata (title, description, OG tags, JSON-LD LocalBusiness), sitemap.ts, robots.ts, privacy policy page
 

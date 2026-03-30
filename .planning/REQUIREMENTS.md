@@ -3,10 +3,10 @@
 ## v1 Requirements
 
 ### FOUNDATION — Project Setup & Config
-- [ ] **FOUND-01**: Project Next.js 15 được khởi tạo với `output: 'export'`, `trailingSlash: true`, và `next-export-optimize-images` cấu hình đúng
-- [ ] **FOUND-02**: Tailwind CSS 3.4 cấu hình với brand tokens (màu xanh lá Nhà Xanh, font Be Vietnam Pro)
-- [ ] **FOUND-03**: Be Vietnam Pro load từ Google Fonts với `font-display: swap` và preconnect
-- [ ] **FOUND-04**: Layout root (Header + Footer + FloatingCTA) được tạo và hiển thị trên mọi màn hình
+- [x] **FOUND-01**: Project Next.js 15 được khởi tạo với `output: 'export'`, `trailingSlash: true`, và `next-export-optimize-images` cấu hình đúng
+- [x] **FOUND-02**: Tailwind CSS 3.4 cấu hình với brand tokens (màu xanh lá Nhà Xanh, font Be Vietnam Pro)
+- [x] **FOUND-03**: Be Vietnam Pro load từ Google Fonts với `font-display: swap` và preconnect
+- [x] **FOUND-04**: Layout root (Header + Footer + FloatingCTA) được tạo và hiển thị trên mọi màn hình
 
 ### LAYOUT — Header & Navigation
 - [ ] **LAYOUT-01**: Header sticky hiển thị logo Nhà Xanh + menu điều hướng (smooth scroll đến sections)
