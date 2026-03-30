@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Be_Vietnam_Pro } from 'next/font/google'
+import Script from 'next/script'
 import { Header } from '@/components/layout'
 import { Footer } from '@/components/layout'
 import { FloatingCTA } from '@/components/layout'
@@ -63,6 +64,22 @@ export default function RootLayout({
         <Footer />
         <FloatingCTA />
         <JsonLd />
+        
+        {/* Third-party Script Skeletons: 
+            Dán mã Google Analytics / Zalo / Facebook Pixel ở đây.
+            Sử dụng strategy="lazyOnload" (để không bị dính error PageSpeed / Lighthouse FCP block)
+        */}
+        {/* 
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="lazyOnload" />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          `}
+        </Script>
+        */}
       </body>
     </html>
   )
