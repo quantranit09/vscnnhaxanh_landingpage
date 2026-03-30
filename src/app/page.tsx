@@ -1,7 +1,4 @@
-import { Hero } from '@/sections/Hero'
-import { Services } from '@/sections/Services'
-import { WhyUs } from '@/sections/WhyUs'
-import { HowItWorks } from '@/sections/HowItWorks'
+import { Hero, Services, WhyUs, HowItWorks, Pricing, Testimonials, About } from '@/sections'
 
 export default function Home() {
   return (
@@ -10,7 +7,9 @@ export default function Home() {
       <Services />
       <WhyUs />
       <HowItWorks />
-      {/* Phase 3: Pricing, Testimonials, FAQ */}
+      <Pricing />
+      <Testimonials />
+      <About />
       {/* Phase 4: Contact Form #lien-he */}
     </>
   )
