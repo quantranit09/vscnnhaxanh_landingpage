@@ -4,30 +4,44 @@ import { Phone } from 'lucide-react'
 
 export function FloatingCTA() {
   return (
-    <div className="fixed bottom-6 right-4 z-50 flex flex-col items-center gap-3">
+    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col gap-4 z-50 pointer-events-none">
       {/* Zalo Button */}
       <a
         href="https://zalo.me/0905000000"
         target="_blank"
         rel="noopener noreferrer"
-        title="Chat Zalo với Nhà Xanh"
-        aria-label="Chat Zalo Nhà Xanh"
-        className="w-14 h-14 bg-[#0068FF] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all duration-200"
-        style={{ boxShadow: '0 4px 20px rgba(0,104,255,0.4)' }}
+        className="pointer-events-auto self-end h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#0068FF] text-white rounded-full 
+                 shadow-lg flex items-center justify-center hover:bg-[#005AE0] 
+                 transition-colors relative lg:w-[60px] hover:w-auto overflow-hidden group 
+                 animate-[bounce-small_2s_ease-in-out_infinite]"
+        aria-label="Chat Zalo"
       >
-        <span className="font-black text-xs leading-none tracking-tight">Zalo</span>
+        <span className="font-bold text-xl md:text-2xl bg-white text-[#0068FF] w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center shrink-0">Z</span>
+        <span className="font-bold whitespace-nowrap overflow-hidden transition-all duration-300 md:max-w-0 md:group-hover:max-w-[200px] md:group-hover:pl-2 md:group-hover:pr-2 hidden md:inline-block">
+          Chat Zalo
+        </span>
       </a>
 
-      {/* Phone Button — pulsing */}
-      <a
-        href="tel:0905000000"
-        title="Gọi ngay 0905-000-000"
-        aria-label="Gọi ngay cho Nhà Xanh"
-        className="w-14 h-14 bg-[#2D8B3A] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all duration-200 animate-pulse hover:animate-none"
-        style={{ boxShadow: '0 4px 20px rgba(45,139,58,0.5)' }}
-      >
-        <Phone size={26} />
-      </a>
+      {/* Phone Button */}
+      <div className="pointer-events-auto relative flex items-center self-end">
+        {/* Pulse effect */}
+        <div className="absolute inset-0 bg-[#2D8B3A] rounded-full animate-ping opacity-60"></div>
+        <div className="absolute inset-[-10px] bg-[#2D8B3A]/30 rounded-full animate-[ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+        
+        <a
+          href="tel:0905000000"
+          className="h-[50px] md:h-[60px] flex items-center bg-[#2D8B3A] border-2 border-white text-white rounded-full 
+                   shadow-xl hover:bg-[#1E6B2A] transition-colors relative z-10 px-4 md:px-6"
+          aria-label="Gọi ngay"
+        >
+          <div className="bg-white/20 p-2 rounded-full mr-2 md:mr-3 shrink-0">
+            <Phone className="fill-white w-4 h-4 md:w-5 md:h-5" />
+          </div>
+          <span className="font-extrabold text-[15px] md:text-lg tracking-wide whitespace-nowrap">
+            0905.000.000
+          </span>
+        </a>
+      </div>
     </div>
   )
 }

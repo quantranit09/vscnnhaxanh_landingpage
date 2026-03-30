@@ -19,25 +19,30 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-white min-h-[90vh] flex items-center">
       {/* Green right panel (desktop) */}
-      <div
-        className="absolute inset-y-0 right-0 w-full md:w-1/2 hidden md:block"
-        style={{
-          background: 'linear-gradient(135deg, #2D8B3A 0%, #1E6B2A 50%, #5AB645 100%)',
-        }}
-        aria-hidden="true"
-      />
-      {/* Decorative circles */}
-      <div
-        className="absolute top-10 right-10 w-72 h-72 rounded-full opacity-10 hidden md:block"
-        style={{ background: '#5AB645' }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute bottom-20 right-40 w-44 h-44 rounded-full opacity-10 hidden md:block"
-        style={{ background: '#ffffff' }}
-        aria-hidden="true"
-      />
-
+      <div className="absolute inset-y-0 right-0 w-full md:w-1/2 hidden md:block">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2670&auto=format&fit=crop')" }}
+        />
+        <div 
+          className="absolute inset-0 opacity-90 mix-blend-multiply"
+          style={{
+            background: 'linear-gradient(135deg, #2D8B3A 0%, #1E6B2A 50%, #5AB645 100%)',
+          }}
+        />
+        
+        {/* Decorative circles */}
+        <div
+          className="absolute top-10 right-10 w-72 h-72 rounded-full opacity-20"
+          style={{ background: '#5AB645' }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute bottom-20 right-40 w-44 h-44 rounded-full opacity-20"
+          style={{ background: '#ffffff' }}
+          aria-hidden="true"
+        />
+      </div>
       <div className="container relative z-10 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Text */}
         <motion.div

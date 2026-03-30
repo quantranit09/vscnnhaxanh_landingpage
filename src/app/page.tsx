@@ -1,4 +1,4 @@
-import { Hero, Services, WhyUs, HowItWorks, Pricing, Testimonials, About } from '@/sections'
+import { Hero, Services, WhyUs, HowItWorks, Pricing, Testimonials, About, Contact } from '@/sections'
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <About />
-      {/* Phase 4: Contact Form #lien-he */}
+      <Contact />
     </>
   )
 }

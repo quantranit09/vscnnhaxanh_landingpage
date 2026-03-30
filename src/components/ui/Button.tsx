@@ -11,6 +11,7 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset'
   target?: string
   rel?: string
+  disabled?: boolean
 }
 
 export function Button({
@@ -23,9 +24,10 @@ export function Button({
   type = 'button',
   target,
   rel,
+  disabled,
 }: ButtonProps) {
   const base =
-    'inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer'
+    'inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100'
 
   const variants = {
     primary:
@@ -46,7 +48,7 @@ export function Button({
 
   const classes = cn(base, variants[variant], sizes[size], className)
 
-  if (href) {
+  if (href && !disabled) {
     return (
       <a href={href} className={classes} target={target} rel={rel}>
         {children}
@@ -55,7 +57,7 @@ export function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes} disabled={disabled}>
       {children}
     </button>
   )
