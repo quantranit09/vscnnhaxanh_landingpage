@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   turbopack: {
-    root: __dirname,
+    root: process.cwd(),
   },
 };
 
