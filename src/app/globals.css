@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* ===== Nhà Xanh Brand Theme ===== */
+@theme {
+  /* Brand Colors */
+  --color-brand-green: #2D8B3A;
+  --color-brand-green-light: #5AB645;
+  --color-brand-green-dark: #1E6B2A;
+  --color-brand-white: #FFFFFF;
+  --color-brand-gray-50: #F5F7F5;
+  --color-brand-gray-100: #E8EDE8;
+  --color-brand-gray-700: #4A5A4A;
+
+  /* Font */
+  --font-sans: var(--font-be-vietnam-pro), 'Be Vietnam Pro', sans-serif;
+}
+
+/* ===== CSS Custom Properties ===== */
+:root {
+  --green-primary: #2D8B3A;
+  --green-light: #5AB645;
+  --green-dark: #1E6B2A;
+  --gray-bg: #F5F7F5;
+}
+
+/* ===== Global Base ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-be-vietnam-pro), 'Be Vietnam Pro', sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Utility: container ===== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .container { padding-left: 2rem; padding-right: 2rem; }
+}
