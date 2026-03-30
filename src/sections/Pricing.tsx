@@ -24,7 +24,7 @@ const partners = [
 
 export function Pricing() {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section id="bang-gia" className="py-20 md:py-28 bg-white">
       <div className="container max-w-5xl">
         <SectionTitle
           badge="Bảng Giá"

@@ -58,7 +58,7 @@ function renderStars(rating: number) {
 
 export function Testimonials() {
   return (
-    <section className="py-20 md:py-28 bg-[#F5F7F5]">
+    <section id="danh-gia" className="py-20 md:py-28 bg-[#F5F7F5]">
       <div className="container">
         <SectionTitle
           badge="Khách hàng nói gì?"
