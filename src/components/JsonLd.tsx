@@ -7,7 +7,7 @@ export function JsonLd() {
       'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh an toàn.',
     telephone: '+84934997265',
     email: 'canhquan.work@gmail.com',
-    url: 'https://nhaxanh-danang.vn',
+    url: 'https://vscnnhaxanhdanang.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '32 Phú Lộc 14, Thanh Khê',

@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://nhaxanh-danang.vn/sitemap.xml',
+    sitemap: 'https://vscnnhaxanhdanang.com/sitemap.xml',
   }
 }

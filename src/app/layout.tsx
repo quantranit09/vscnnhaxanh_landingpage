@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: 'vi_VN',
     type: 'website',
     siteName: 'Công ty TNHH TM XD DV Nhà Xanh',
-    url: 'https://nhaxanh-danang.vn',
+    url: 'https://vscnnhaxanhdanang.com',
   },
   twitter: {
     card: 'summary_large_image',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: 'https://nhaxanh-danang.vn',
+    canonical: 'https://vscnnhaxanhdanang.com',
   },
 }
 
