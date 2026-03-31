@@ -68,14 +68,14 @@ export default function ChinhSachBaoMatPage() {
           <ul className="space-y-2">
             <li>
               📞 Hotline:{' '}
-              <a href="tel:0905000000" className="text-[#2D8B3A] hover:underline font-medium">
-                0905-000-000
+              <a href="tel:+84934997265" className="text-[#2D8B3A] hover:underline font-medium">
+                0934.997.265
               </a>
             </li>
             <li>
               📧 Email:{' '}
-              <a href="mailto:nhaxanh@gmail.com" className="text-[#2D8B3A] hover:underline">
-                nhaxanh@gmail.com
+              <a href="mailto:canhquan.work@gmail.com" className="text-[#2D8B3A] hover:underline">
+                canhquan.work@gmail.com
               </a>
             </li>
             <li>📍 Địa chỉ: Đà Nẵng, Việt Nam</li>

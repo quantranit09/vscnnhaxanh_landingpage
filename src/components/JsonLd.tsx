@@ -5,14 +5,16 @@ export function JsonLd() {
     name: 'Vệ Sinh Công Nghiệp Nhà Xanh',
     description:
       'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh an toàn.',
-    telephone: '0905000000',
-    email: 'nhaxanh@gmail.com',
+    telephone: '+84934997265',
+    email: 'canhquan.work@gmail.com',
     url: 'https://nhaxanh-danang.vn',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '32 Phú Lộc 14, Thanh Khê',
       addressLocality: 'Đà Nẵng',
       addressCountry: 'VN',
     },
+    sameAs: ['https://www.facebook.com/vesinhcongnghiepnhaxanh'],
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 16.0544,

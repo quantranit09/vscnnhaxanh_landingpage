@@ -17,7 +17,7 @@ const beVietnamPro = Be_Vietnam_Pro({
 export const metadata: Metadata = {
   title: 'Vệ Sinh Công Nghiệp Nhà Xanh Đà Nẵng | Báo Giá Trong 30 Phút',
   description:
-    'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh an toàn. Báo giá nhanh. Hotline: 0905-000-000',
+    'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh an toàn. Báo giá nhanh. Hotline: 0934.997.265',
   keywords: [
     'vệ sinh công nghiệp đà nẵng',
     'dịch vụ vệ sinh văn phòng đà nẵng',

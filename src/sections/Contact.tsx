@@ -1,176 +1,220 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useForm, ValidationError } from '@formspree/react'
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ArrowRight } from 'lucide-react'
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { Button } from '@/components/ui/Button'
 
 const contactInfo = [
-  { icon: MapPin, title: 'Địa chỉ', detail: 'Đà Nẵng: 123 Nguyễn Văn Linh, Hải Châu\nHội An: 45 Lý Thường Kiệt, Sơn Phong' },
-  { icon: Phone, title: 'Hotline / Zalo', detail: '0905.000.000' },
-  { icon: Mail, title: 'Email', detail: 'info@nhaxanh.vn' },
-  { icon: Clock, title: 'Giờ hoạt động', detail: '24/7 — Phục vụ cả ngày Lễ, Tết' },
+  { icon: MapPin, title: 'Địa chỉ', detail: '32 Phú Lộc 14, Thanh Khê, Đà Nẵng' },
+  { icon: Phone, title: 'Hotline & Zalo', detail: '0934.997.265' },
+  { icon: Mail, title: 'Email', detail: 'canhquan.work@gmail.com' },
+  { icon: Clock, title: 'Giờ hoạt động', detail: 'Phục vụ 24/7 (Cả Lễ, Tết)' },
 ]
 
 export function Contact() {
-  const [state, handleSubmit] = useForm("mnnjokwe") // Thay bằng ID Formspree thật
+  const [state, handleSubmit] = useForm("xbdpyjdg") // Thay bằng ID Formspree thật
   const [phoneWarning, setPhoneWarning] = useState('')
 
   return (
-    <section id="lien-he" className="py-20 md:py-28 bg-[#2D8B3A]/5 border-t border-emerald-100">
-      <div className="container max-w-6xl">
+    <section id="lien-he" className="py-20 md:py-28 bg-[#FAFCFB] border-t border-emerald-50">
+      <div className="container max-w-[1200px]">
         <SectionTitle
           badge="Liên Hệ Ngay"
-          title="Nhận Khảo Sát & Báo Giá Miễn Phí"
-          subtitle="Để lại thông tin, chuyên viên của chúng tôi sẽ có mặt tại công trình để khảo sát thực tế."
+          title="Trao Đổi Với Chuyên Viên"
+          subtitle="Khảo sát tận nơi và tư vấn giải pháp làm sạch hoàn toàn miễn phí. Đội ngũ Nhà Xanh sẽ có mặt chỉ sau 30 phút."
         />
 
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-8 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+        <div className="grid lg:grid-cols-5 bg-white rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-100">
           
-          {/* Left: Info Panel */}
-          <div className="lg:col-span-2 bg-[#2D8B3A] p-8 md:p-12 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 -mb-16 -ml-16 w-48 h-48 bg-black/10 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <h3 className="text-2xl font-bold mb-8 relative z-10">Thông Tin Liên Hệ</h3>
-            
-            <div className="space-y-8 relative z-10">
-              {contactInfo.map((info, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shrink-0">
-                    <info.icon size={20} className="text-emerald-50" />
-                  </div>
-                  <div>
-                    <h4 className="text-emerald-100/90 text-sm font-medium mb-1">{info.title}</h4>
-                    <p className="font-semibold whitespace-pre-line leading-relaxed">{info.detail}</p>
-                  </div>
-                </div>
-              ))}
+          {/* Left: Info Panel (Image + Overlay) */}
+          <div className="lg:col-span-2 relative p-10 md:p-12 xl:p-14 text-white overflow-hidden flex flex-col justify-between min-h-[400px] lg:min-h-[500px]">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <Image 
+                src="/images/building-exterior-curve.jpg" 
+                alt="Công trình vệ sinh Nhà Xanh" 
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[#164a22]/90 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A3D13] via-[#0A3D13]/60 to-transparent"></div>
             </div>
-
-            <div className="mt-16 pt-8 border-t border-white/20 relative z-10">
-              <p className="text-sm text-emerald-100/90 italic">
-                *Tư vấn kỹ thuật và khảo sát tận nơi là hoàn toàn miễn phí, không bắt buộc sử dụng dịch vụ.
+            
+            <div className="relative z-10">
+              <div className="w-12 h-12 bg-white backdrop-blur-sm rounded-2xl flex items-center justify-center mb-8 border border-white/30 shadow-xl overflow-hidden p-0.5 relative">
+                <Image src="/images/logo.png" alt="Nhà Xanh Logo" width={48} height={48} className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-3xl font-extrabold mb-4 leading-tight">Giải pháp vệ sinh<br/>chuyên nghiệp.</h3>
+              <p className="text-emerald-50/80 mb-12 text-sm leading-relaxed max-w-sm">
+                Nhà Xanh tự hào mang đến môi trường sống và làm việc trong lành nhất cho hơn 500+ khách hàng tại Đà Nẵng.
               </p>
+              
+              <div className="space-y-8">
+                {contactInfo.map((info, idx) => (
+                  <div key={idx} className="flex gap-4 items-start group">
+                    <info.icon size={22} className="text-emerald-400 mt-1 shrink-0" />
+                    <div>
+                      <h4 className="text-emerald-100/70 text-xs font-bold uppercase tracking-wider mb-1.5">{info.title}</h4>
+                      <p className="font-medium whitespace-pre-line leading-snug text-white/95 text-[15px]">{info.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Right: Form */}
-          <div className="lg:col-span-3 p-8 md:p-12">
+          {/* Right: Ultra-Modern Form */}
+          <div className="lg:col-span-3 p-8 md:p-12 lg:p-14 xl:p-16 flex flex-col justify-center">
             {state.succeeded ? (
               <motion.div 
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="h-full flex flex-col items-center justify-center text-center py-12"
               >
-                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle2 size={40} />
+                <div className="w-24 h-24 bg-emerald-50 text-[#2D8B3A] rounded-full flex items-center justify-center mb-6 shadow-inner">
+                  <CheckCircle2 size={48} className="stroke-[2.5]" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Gửi Yêu Cầu Thành Công!</h3>
-                <p className="text-gray-600 max-w-md">
-                  Cảm ơn bạn đã quan tâm đến dịch vụ của Nhà Xanh. Chuyên viên của chúng tôi sẽ gọi lại vào số điện thoại của bạn trong thời gian sớm nhất.
+                <h3 className="text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">Tuyệt Vời!</h3>
+                <p className="text-gray-500 mb-10 leading-relaxed text-[17px]">
+                  Yêu cầu của bạn đã được ghi nhận. Chuyên viên Nhà Xanh sẽ liên hệ với bạn trong ít phút tới.
                 </p>
                 <Button 
                   onClick={() => window.location.reload()} 
                   variant="outline" 
-                  className="mt-8"
+                  size="lg"
+                  className="rounded-2xl border-2 hover:bg-gray-50 h-14 px-8 font-semibold"
                 >
-                  Gửi yêu cầu khác
+                  <ArrowRight className="mr-2 rotate-180" size={18} />
+                  Quay lại biểu mẫu
                 </Button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-gray-700">Họ và Tên *</label>
-                    <input 
-                      id="name" 
-                      name="name" 
-                      type="text" 
-                      required 
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2D8B3A]/20 focus:border-[#2D8B3A] transition-colors"
-                      placeholder="Nguyễn Văn A" 
-                    />
-                    <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-xs" />
+              <form onSubmit={handleSubmit} className="space-y-5">
+                
+                <div className="mb-10">
+                  <h3 className="text-[28px] font-extrabold text-gray-900 mb-3 tracking-tight">Gửi Yêu Cầu</h3>
+                  <p className="text-gray-500 text-[15px]">Mọi thông tin đều được bảo mật. Báo giá hoàn toàn miễn phí.</p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-5">
+                  {/* Name Input */}
+                  <div className="relative group">
+                    <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-3 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
+                      <label htmlFor="name" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1">
+                        Họ và Tên <span className="text-red-500">*</span>
+                      </label>
+                      <input 
+                        id="name" 
+                        name="name" 
+                        type="text" 
+                        required 
+                        className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-medium"
+                        placeholder="Nguyễn Văn A" 
+                      />
+                    </div>
+                    <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-xs mt-1.5 ml-2 font-medium absolute" />
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium text-gray-700">Số Điện Thoại *</label>
-                    <input 
-                      id="phone" 
-                      name="phone" 
-                      type="tel" 
-                      required 
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2D8B3A]/20 focus:border-[#2D8B3A] transition-colors"
-                      placeholder="0905 xxx xxx" 
-                      onChange={(e) => {
-                        const val = e.target.value.replace(/\D/g,'')
-                        if(val.length > 0 && val.length < 10) setPhoneWarning('Số điện thoại cần có đúng 10 chữ số')
-                        else setPhoneWarning('')
-                      }}
-                    />
-                    {phoneWarning && <p className="text-amber-500 text-xs">{phoneWarning}</p>}
-                    <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-500 text-xs" />
+                  
+                  {/* Phone Input */}
+                  <div className="relative group">
+                    <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-3 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
+                      <label htmlFor="phone" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1">
+                        Số Điện Thoại <span className="text-red-500">*</span>
+                      </label>
+                      <input 
+                        id="phone" 
+                        name="phone" 
+                        type="tel" 
+                        required 
+                        className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-medium"
+                        placeholder="0934 xxx xxx" 
+                        onChange={(e) => {
+                          const val = e.target.value.replace(/\D/g,'')
+                          if(val.length > 0 && val.length < 10) setPhoneWarning('Số điện thoại thường có đúng 10 chữ số')
+                          else setPhoneWarning('')
+                        }}
+                      />
+                    </div>
+                    {phoneWarning && <p className="text-amber-500 text-xs mt-1.5 ml-2 font-medium absolute">{phoneWarning}</p>}
+                    <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-500 text-xs mt-1.5 ml-2 font-medium absolute" />
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="service" className="text-sm font-medium text-gray-700">Dịch Vụ Quan Tâm</label>
+                <div className="grid md:grid-cols-2 gap-5 mt-3">
+                  {/* Service Select */}
+                  <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-3 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
+                    <label htmlFor="service" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1">Dịch Vụ Quan Tâm</label>
                     <select 
                       id="service" 
                       name="service"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2D8B3A]/20 focus:border-[#2D8B3A] transition-colors bg-white appearance-none"
+                      className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 appearance-none cursor-pointer"
                     >
-                      <option value="Chưa xác định">-- Chọn dịch vụ --</option>
-                      <option value="Vệ sinh văn phòng">Vệ sinh văn phòng định kỳ</option>
-                      <option value="Vệ sinh nhà xưởng">Vệ sinh nhà xưởng</option>
-                      <option value="Vệ sinh sau xây dựng">Vệ sinh sau xây dựng</option>
-                      <option value="Dọn nhà tổng thể">Dọn dẹp nhà cửa tổng thể</option>
-                      <option value="Giặt thảm sofa">Giặt thảm / ghế sofa</option>
+                      <option value="Chưa xác định" className="font-medium text-gray-500">-- Vui lòng chọn --</option>
+                      <option value="Vệ sinh văn phòng" className="font-medium">Vệ sinh văn phòng định kỳ</option>
+                      <option value="Vệ sinh nhà xưởng" className="font-medium">Vệ sinh nhà xưởng</option>
+                      <option value="Vệ sinh sau xây dựng" className="font-medium">Vệ sinh sau xây dựng</option>
+                      <option value="Dọn nhà tổng thể" className="font-medium">Dọn nhà cửa tổng thể</option>
+                      <option value="Giặt thảm sofa" className="font-medium">Giặt thảm / ghế sofa</option>
                     </select>
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="area" className="text-sm font-medium text-gray-700">Diện Tích Ước Tính (m²)</label>
+                  
+                  {/* Area Input */}
+                  <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-3 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
+                    <label htmlFor="area" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1">Diện Tích Ước Tính (m²)</label>
                     <input 
                       id="area" 
                       name="area" 
                       type="number" 
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2D8B3A]/20 focus:border-[#2D8B3A] transition-colors"
-                      placeholder="Ví dụ: 100" 
+                      className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-medium"
+                      placeholder="Ví dụ: 150" 
                     />
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-gray-700">Ghi Chú Yêu Cầu (Tùy chọn)</label>
+                {/* Message Textarea */}
+                <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-4 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200 mt-3">
+                  <label htmlFor="message" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Yêu Cầu Chi Tiết (Tùy chọn)</label>
                   <textarea 
                     id="message" 
                     name="message" 
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2D8B3A]/20 focus:border-[#2D8B3A] transition-colors resize-none text-[16px] md:text-sm"
+                    rows={3}
+                    className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 resize-none placeholder:text-gray-300 placeholder:font-medium leading-relaxed"
                     placeholder="Ghi chú thêm về hiện trạng hoặc thời gian mong muốn khảo sát..." 
                   ></textarea>
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="w-full flex items-center justify-center gap-2"
-                  disabled={state.submitting}
-                >
-                  {state.submitting ? (
-                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-                  ) : (
-                    <>
-                      <Send size={20} />
-                      Nhận Báo Giá Ngay
-                    </>
-                  )}
-                </Button>
-                <p className="text-xs text-center text-gray-400 mt-4 leading-relaxed">
-                  Thông tin của bạn được bảo mật tuyệt đối theo <a href="/chinh-sach-bao-mat" className="underline hover:text-[#2D8B3A]">chính sách bảo mật</a> của chúng tôi.
+                {state.errors && state.errors.getFormErrors().length > 0 && (
+                  <div className="bg-red-50 text-red-600 p-4 rounded-2xl text-sm border border-red-100 flex items-start gap-3 mt-4">
+                    <div className="mt-0.5"><CheckCircle2 size={16} className="text-red-500" /></div>
+                    <span><span className="font-bold">Lỗi:</span> Không thể kết nối.</span>
+                  </div>
+                )}
+
+                <div className="pt-6">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full h-[60px] flex items-center justify-center gap-2 rounded-2xl text-base font-bold shadow-xl shadow-[#2D8B3A]/20 hover:shadow-[#2D8B3A]/30 hover:-translate-y-0.5 transition-all"
+                    disabled={state.submitting}
+                  >
+                    {state.submitting ? (
+                      <span className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                    ) : (
+                      <>
+                        Gửi Yêu Cầu Báo Giá
+                        <Send size={18} className="ml-1" />
+                      </>
+                    )}
+                  </Button>
+                </div>
+                
+                <p className="text-[13px] text-center text-gray-400 font-medium mt-6">
+                  Dữ liệu được xử lý an toàn theo <a href="/chinh-sach-bao-mat" className="underline underline-offset-2 hover:text-[#2D8B3A] transition-colors">chính sách bảo mật</a>.
                 </p>
               </form>
             )}

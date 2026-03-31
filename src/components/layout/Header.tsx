@@ -1,32 +1,41 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Phone, Menu, X } from 'lucide-react'
+import { useState } from "react";
+import { Phone, Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const navLinks = [
-  { name: 'Dịch vụ', href: '#dich-vu' },
-  { name: 'Bảng giá', href: '#bang-gia' },
-  { name: 'Đánh giá', href: '#danh-gia' },
-  { name: 'Liên hệ', href: '#lien-he' },
-]
+  { name: "Dịch vụ", href: "#dich-vu" },
+  { name: "Bảng giá", href: "#bang-gia" },
+  { name: "Đánh giá", href: "#danh-gia" },
+  { name: "Liên hệ", href: "#lien-he" },
+];
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
       <div className="container py-3 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 shrink-0">
-          {/* Replace img src with real logo when available */}
-          <div className="w-10 h-10 bg-[#2D8B3A] rounded-lg flex items-center justify-center">
-            <span className="text-white font-black text-sm leading-none">NX</span>
-          </div>
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Image
+            src="/images/logo.png"
+            alt="Nhà Xanh Logo"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-contain"
+          />
           <div>
-            <div className="text-lg font-extrabold text-[#2D8B3A] leading-tight">NHÀ XANH</div>
-            <div className="text-xs text-[#4A5A4A] leading-tight hidden sm:block">Vệ Sinh Công Nghiệp</div>
+            <div className="text-lg font-extrabold text-[#2D8B3A] leading-tight">
+              NHÀ XANH
+            </div>
+            <div className="text-xs text-[#4A5A4A] leading-tight hidden sm:block">
+              Vệ Sinh Công Nghiệp
+            </div>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
@@ -44,11 +53,11 @@ export function Header() {
         {/* Desktop Hotline */}
         <div className="hidden md:flex items-center">
           <a
-            href="tel:0905000000"
+            href="tel:+84934997265"
             className="flex items-center gap-2 bg-[#2D8B3A] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#1E6B2A] transition-colors shadow-md text-sm"
           >
             <Phone size={16} />
-            <span>0905-000-000</span>
+            <span>0934.997.265</span>
           </a>
         </div>
 
@@ -56,7 +65,7 @@ export function Header() {
         <button
           className="md:hidden p-2 text-gray-700 hover:text-[#2D8B3A] transition-colors"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? 'Đóng menu' : 'Mở menu'}
+          aria-label={isOpen ? "Đóng menu" : "Mở menu"}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -76,14 +85,14 @@ export function Header() {
             </a>
           ))}
           <a
-            href="tel:0905000000"
+            href="tel:+84934997265"
             className="flex items-center justify-center gap-2 bg-[#2D8B3A] text-white px-6 py-3.5 rounded-lg font-bold text-base mt-2"
           >
             <Phone size={20} />
-            Gọi Ngay: 0905-000-000
+            Gọi Ngay: 0934.997.265
           </a>
         </div>
       )}
     </header>
-  )
+  );
 }

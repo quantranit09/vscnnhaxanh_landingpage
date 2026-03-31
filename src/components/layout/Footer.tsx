@@ -1,4 +1,5 @@
 import { Phone, Mail, Clock, MapPin } from 'lucide-react'
+import Image from 'next/image'
 
 const services = [
   { name: 'Vệ sinh văn phòng', href: '#dich-vu' },
@@ -16,8 +17,8 @@ export function Footer() {
           {/* Col 1: Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                <span className="text-white font-black text-sm">NX</span>
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-0.5">
+                <Image src="/images/logo.png" alt="Nhà Xanh Logo" width={40} height={40} className="w-full h-full object-contain" />
               </div>
               <div>
                 <div className="text-xl font-extrabold leading-tight">NHÀ XANH</div>
@@ -56,18 +57,18 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-white/75 text-sm">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-[#5AB645]" />
-                <span>Đà Nẵng, Việt Nam</span>
+                <span>32 Phú Lộc 14, Thanh Khê, Đà Nẵng</span>
               </li>
               <li className="flex items-center gap-3 text-white/75 text-sm">
                 <Phone size={16} className="shrink-0 text-[#5AB645]" />
-                <a href="tel:0905000000" className="hover:text-white font-medium transition-colors">
-                  0905-000-000
+                <a href="tel:+84934997265" className="hover:text-white font-medium transition-colors">
+                  0934.997.265
                 </a>
               </li>
               <li className="flex items-center gap-3 text-white/75 text-sm">
                 <Mail size={16} className="shrink-0 text-[#5AB645]" />
-                <a href="mailto:nhaxanh@gmail.com" className="hover:text-white transition-colors">
-                  nhaxanh@gmail.com
+                <a href="mailto:canhquan.work@gmail.com" className="hover:text-white transition-colors">
+                  canhquan.work@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/75 text-sm">
@@ -77,13 +78,19 @@ export function Footer() {
                   <div>Chủ nhật: 8:00 – 17:00</div>
                 </div>
               </li>
+              <li className="flex items-center gap-3 text-white/75 text-sm">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0 text-[#5AB645]"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <a href="https://www.facebook.com/vesinhcongnghiepnhaxanh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Facebook Fanpage
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/15 py-5">
+      <div className="border-t border-white/15 pt-5 pb-24 md:pb-5">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 text-white/50 text-xs">
           <p>© 2025 Vệ Sinh Công Nghiệp Nhà Xanh Đà Nẵng. All rights reserved.</p>
           <a href="/chinh-sach-bao-mat" className="hover:text-white/80 transition-colors underline underline-offset-2">

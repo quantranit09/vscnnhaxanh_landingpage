@@ -107,10 +107,10 @@ export function HowItWorks() {
               </div>
             </div>
             <a
-              href="tel:0905000000"
+              href="tel:+84934997265"
               className="shrink-0 bg-white text-[#2D8B3A] px-7 py-3.5 rounded-xl font-bold hover:bg-[#F5F7F5] transition-colors whitespace-nowrap shadow-sm"
             >
-              Gọi: 0905-000-000
+              Gọi: 0934.997.265
             </a>
           </div>
         </motion.div>
