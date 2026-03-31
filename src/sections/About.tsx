@@ -30,7 +30,7 @@ export function About() {
             <div className="space-y-5 text-[#4A5A4A] leading-relaxed mb-8">
               <p>
                 Được thành lập với sứ mệnh mang đến môi trường sống và làm việc sạch sẽ, an toàn nhất, 
-                <strong> Vệ Sinh Công Nghiệp Nhà Xanh</strong> tự hào là đối tác tin cậy của hàng trăm hộ gia đình và doanh nghiệp tại Đà Nẵng.
+                <strong>Công ty TNHH TM XD DV Nhà Xanh</strong> tự hào là đối tác tin cậy của hàng trăm hộ gia đình và doanh nghiệp tại Đà Nẵng.
               </p>
               <p>
                 Chúng tôi không chỉ làm sạch bề mặt, chúng tôi dọn dẹp vi khuẩn, nấm mốc và các tác nhân gây hại bằng hệ thống máy móc thông minh và 100% hóa chất đạt chứng nhận an toàn, thân thiện với môi trường.

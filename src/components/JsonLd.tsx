@@ -2,7 +2,7 @@ export function JsonLd() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Vệ Sinh Công Nghiệp Nhà Xanh',
+    name: 'Công ty TNHH TM XD DV Nhà Xanh',
     description:
       'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh an toàn.',
     telephone: '+84934997265',

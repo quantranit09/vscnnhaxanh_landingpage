@@ -31,8 +31,8 @@ export function Header() {
             <div className="text-lg font-extrabold text-[#2D8B3A] leading-tight">
               NHÀ XANH
             </div>
-            <div className="text-xs text-[#4A5A4A] leading-tight hidden sm:block">
-              Vệ Sinh Công Nghiệp
+            <div className="text-[10px] text-[#4A5A4A] leading-tight hidden sm:block font-medium">
+              CÔNG TY TNHH TM XD DV NHÀ XANH
             </div>
           </div>
         </Link>

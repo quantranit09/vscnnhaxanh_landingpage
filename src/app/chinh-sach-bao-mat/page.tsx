@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Chính Sách Bảo Mật | Vệ Sinh Công Nghiệp Nhà Xanh Đà Nẵng',
+  title: 'Chính Sách Bảo Mật | Công ty TNHH TM XD DV Nhà Xanh',
   description: 'Chính sách bảo mật thông tin khách hàng của Vệ Sinh Công Nghiệp Nhà Xanh Đà Nẵng.',
   robots: { index: false, follow: false },
 }
@@ -19,7 +20,7 @@ export default function ChinhSachBaoMatPage() {
             1. Thông Tin Chúng Tôi Thu Thập
           </h2>
           <p className="mb-3">
-            Khi bạn sử dụng trang web và dịch vụ của Vệ Sinh Công Nghiệp Nhà Xanh, chúng tôi có thể thu thập:
+            Khi bạn sử dụng trang web và dịch vụ của Công ty TNHH TM XD DV Nhà Xanh, chúng tôi có thể thu thập:
           </p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Họ tên và số điện thoại (khi bạn điền form báo giá)</li>
@@ -84,9 +85,9 @@ export default function ChinhSachBaoMatPage() {
       </div>
 
       <div className="mt-12 pt-6 border-t border-gray-200">
-        <a href="/" className="text-[#2D8B3A] hover:underline font-medium flex items-center gap-2">
+        <Link href="/" className="text-[#2D8B3A] hover:underline font-medium flex items-center gap-2">
           ← Quay lại trang chủ
-        </a>
+        </Link>
       </div>
     </div>
   )

@@ -22,7 +22,7 @@ export function Footer() {
               </div>
               <div>
                 <div className="text-xl font-extrabold leading-tight">NHÀ XANH</div>
-                <div className="text-xs text-white/70 leading-tight">Vệ Sinh Công Nghiệp</div>
+                <div className="text-xs text-white/70 leading-tight">Công ty TNHH TM XD DV Nhà Xanh</div>
               </div>
             </div>
             <p className="text-white/80 font-medium italic mb-3 text-sm">
@@ -91,8 +91,9 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/15 pt-5 pb-24 md:pb-5">
-        <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 text-white/50 text-xs">
-          <p>© 2025 Vệ Sinh Công Nghiệp Nhà Xanh Đà Nẵng. All rights reserved.</p>
+        <div className="container flex flex-col md:flex-row items-center justify-between gap-3 text-white/50 text-xs text-center md:text-left">
+          <p>© 2025 Công ty TNHH TM XD DV Nhà Xanh. All rights reserved.</p>
+          <p>Thiết kế bởi <a href="https://zalo.me/0935426117" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors underline underline-offset-2">Trần Cảnh Quân</a></p>
           <a href="/chinh-sach-bao-mat" className="hover:text-white/80 transition-colors underline underline-offset-2">
             Chính sách bảo mật
           </a>
