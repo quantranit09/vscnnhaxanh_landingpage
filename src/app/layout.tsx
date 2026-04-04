@@ -8,9 +8,10 @@ import { JsonLd } from '@/components/JsonLd'
 import './globals.css'
 
 // ─── TRACKING IDs ─────────────────────────────────────────────────────────────
-// TODO: Thay các placeholder dưới đây bằng ID thật từ tài khoản Google của bạn
-const GTM_ID = 'GTM-K6DGNWC5'          // Google Tag Manager Container ID
-// Tất cả conversion tracking, Google Ads, GA4 đều quản lý qua GTM — không cần thêm code khác
+const GTM_ID      = 'GTM-K6DGNWC5'     // Google Tag Manager Container ID
+const GA4_ID      = 'G-PSXK2E5C55'     // Google Analytics 4
+const GOOGLE_ADS_ID = 'AW-11498445959' // Google Ads Conversion ID
+// Formspree Form ID: xbdpyjdg (dùng trong Contact.tsx)
 // ──────────────────────────────────────────────────────────────────────────────
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -82,10 +83,10 @@ export default function RootLayout({
         <JsonLd />
 
         {/* ── Google Tag Manager ── */}
-        {/* Quản lý tất cả tracking (GA4, Google Ads conversion, remarketing) qua GTM */}
-        {/* Thay GTM-XXXXXXX bằng Container ID thật từ tagmanager.google.com */}
+        {/* GTM-K6DGNWC5 quản lý: GA4 (G-PSXK2E5C55) + Google Ads (AW-11498445959) */}
         <Script id="gtm-init" strategy="afterInteractive">
           {`
+            window.dataLayer = window.dataLayer || [];
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -93,7 +94,24 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','${GTM_ID}');
           `}
         </Script>
-        {/* ── END Google Tag Manager ── */}
+
+        {/* ── Google Tag (gtag.js) — GA4 + Google Ads xác minh domain ── */}
+        {/* Cần thiết để Google Ads detect tag trên website */}
+        <Script
+          id="gtag-js"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA4_ID}');
+            gtag('config', '${GOOGLE_ADS_ID}');
+          `}
+        </Script>
+        {/* ── END Scripts ── */}
       </body>
     </html>
   )
