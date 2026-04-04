@@ -7,6 +7,12 @@ import { FloatingCTA } from '@/components/layout'
 import { JsonLd } from '@/components/JsonLd'
 import './globals.css'
 
+// ─── TRACKING IDs ─────────────────────────────────────────────────────────────
+// TODO: Thay các placeholder dưới đây bằng ID thật từ tài khoản Google của bạn
+const GTM_ID = 'GTM-K6DGNWC5'          // Google Tag Manager Container ID
+// Tất cả conversion tracking, Google Ads, GA4 đều quản lý qua GTM — không cần thêm code khác
+// ──────────────────────────────────────────────────────────────────────────────
+
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ['vietnamese', 'latin'],
   weight: ['400', '500', '600', '700', '800'],
@@ -59,27 +65,35 @@ export default function RootLayout({
   return (
     <html lang="vi" className={beVietnamPro.variable} suppressHydrationWarning>
       <body className="font-sans antialiased">
+        {/* Google Tag Manager (noscript fallback) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End GTM noscript */}
         <Header />
         <main>{children}</main>
         <Footer />
         <FloatingCTA />
         <JsonLd />
-        
-        {/* Third-party Script Skeletons: 
-            Dán mã Google Analytics / Zalo / Facebook Pixel ở đây.
-            Sử dụng strategy="lazyOnload" (để không bị dính error PageSpeed / Lighthouse FCP block)
-        */}
-        {/* 
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="lazyOnload" />
-        <Script id="google-analytics" strategy="lazyOnload">
+
+        {/* ── Google Tag Manager ── */}
+        {/* Quản lý tất cả tracking (GA4, Google Ads conversion, remarketing) qua GTM */}
+        {/* Thay GTM-XXXXXXX bằng Container ID thật từ tagmanager.google.com */}
+        <Script id="gtm-init" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
           `}
         </Script>
-        */}
+        {/* ── END Google Tag Manager ── */}
       </body>
     </html>
   )
