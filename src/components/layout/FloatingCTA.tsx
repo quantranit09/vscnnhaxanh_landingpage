@@ -1,6 +1,7 @@
 'use client'
 
 import { Phone } from 'lucide-react'
+import { trackPhoneClick } from '@/lib/gtag'
 
 export function FloatingCTA() {
   return (
@@ -29,6 +30,7 @@ export function FloatingCTA() {
         
         <a
           href="tel:+84934997265"
+          onClick={trackPhoneClick}
           className="h-[48px] md:h-[56px] flex items-center bg-[#2D8B3A] border-2 border-white text-white rounded-full 
                    shadow-xl hover:bg-[#1E6B2A] transition-colors relative z-10 px-3 md:px-5"
           aria-label="Gọi ngay"
