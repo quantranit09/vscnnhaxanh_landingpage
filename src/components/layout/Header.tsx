@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { trackPhoneClick } from "@/lib/gtag";
 
 const navLinks = [
   { name: "Dịch vụ", href: "#dich-vu" },
@@ -55,7 +54,6 @@ export function Header() {
         <div className="hidden md:flex items-center">
           <a
             href="tel:+84934997265"
-            onClick={trackPhoneClick}
             className="flex items-center gap-2 bg-[#2D8B3A] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#1E6B2A] transition-colors shadow-md text-sm"
           >
             <Phone size={16} />
@@ -88,7 +86,6 @@ export function Header() {
           ))}
           <a
             href="tel:+84934997265"
-            onClick={trackPhoneClick}
             className="flex items-center justify-center gap-2 bg-[#2D8B3A] text-white px-6 py-3.5 rounded-lg font-bold text-base mt-2"
           >
             <Phone size={20} />

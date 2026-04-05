@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import { Phone, ArrowRight, CheckCircle2, Star, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui'
-import { trackPhoneClick } from '@/lib/gtag'
 
 const highlights = [
   'Báo giá siêu tốc trong 30 phút',
@@ -45,7 +44,6 @@ export function Hero() {
             <Button 
               href="tel:+84934997265" 
               size="lg" 
-              onClick={trackPhoneClick}
               className="h-14 px-8 text-base shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/40 transition-shadow rounded-2xl"
             >
               <Phone size={20} className="mr-2" />
