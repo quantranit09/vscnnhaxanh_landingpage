@@ -1,7 +1,8 @@
 // ─── Google Ads Conversion Tracking ──────────────────────────────────────────
 // Conversion ID  : AW-11498445959
-// Phone Click    : AW-11498445959/YgxtCKzBpZYcEIe58eoq  ✅
-// Form Submit    : AW-11498445959/8iHXCIDN1pYcEIe58eoq   ✅
+// Phone Click    : AW-11498445959/YgxtCKzBpZYcEIe58eoq        ✅
+// Form Submit    : AW-11498445959/8iHXCIDN1pYcEIe58eoq         ✅
+// Form Submit(1) : AW-11498445959/WMJRCNj-3JYcEIe58eoq         ✅
 // ──────────────────────────────────────────────────────────────────────────────
 
 declare global {
@@ -14,8 +15,9 @@ declare global {
 const GOOGLE_ADS_ID = 'AW-11498445959'
 
 export const CONVERSION = {
-  PHONE_CLICK: `${GOOGLE_ADS_ID}/YgxtCKzBpZYcEIe58eoq`,
-  FORM_SUBMIT:  `${GOOGLE_ADS_ID}/8iHXCIDN1pYcEIe58eoq`,
+  PHONE_CLICK:   `${GOOGLE_ADS_ID}/YgxtCKzBpZYcEIe58eoq`,
+  FORM_SUBMIT:   `${GOOGLE_ADS_ID}/8iHXCIDN1pYcEIe58eoq`,
+  FORM_SUBMIT_1: `${GOOGLE_ADS_ID}/WMJRCNj-3JYcEIe58eoq`,
 } as const
 
 export function fireConversion(sendTo: string) {
@@ -28,7 +30,9 @@ export function trackPhoneClick() {
   fireConversion(CONVERSION.PHONE_CLICK)
 }
 
-/** Fire khi Formspree xác nhận form submit thành công */
+/** Fire khi Formspree xác nhận form submit thành công — fire cả 2 actions */
 export function trackFormSubmit() {
   fireConversion(CONVERSION.FORM_SUBMIT)
+  fireConversion(CONVERSION.FORM_SUBMIT_1)
 }
+
