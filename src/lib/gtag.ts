@@ -1,6 +1,6 @@
 // ─── Google Ads Conversion Tracking ──────────────────────────────────────────
 // Conversion ID  : AW-11498445959
-// Phone Click    : AW-11498445959/YgxtCKzBpZYcEIe58eoq        ✅
+// Phone Click    : AW-11498445959/gROpCJTu5pccEIe58eoq        ✅
 // Form Submit    : AW-11498445959/8iHXCIDN1pYcEIe58eoq         ✅
 // Form Submit(1) : AW-11498445959/WMJRCNj-3JYcEIe58eoq         ✅
 // ──────────────────────────────────────────────────────────────────────────────
@@ -15,7 +15,7 @@ declare global {
 const GOOGLE_ADS_ID = 'AW-11498445959'
 
 export const CONVERSION = {
-  PHONE_CLICK:   `${GOOGLE_ADS_ID}/YgxtCKzBpZYcEIe58eoq`,
+  PHONE_CLICK:   `${GOOGLE_ADS_ID}/gROpCJTu5pccEIe58eoq`,
   FORM_SUBMIT:   `${GOOGLE_ADS_ID}/8iHXCIDN1pYcEIe58eoq`,
   FORM_SUBMIT_1: `${GOOGLE_ADS_ID}/WMJRCNj-3JYcEIe58eoq`,
 } as const
@@ -25,9 +25,30 @@ export function fireConversion(sendTo: string) {
   window.gtag('event', 'conversion', { send_to: sendTo, currency: 'VND' })
 }
 
-/** Fire khi user click số điện thoại */
-export function trackPhoneClick() {
-  fireConversion(CONVERSION.PHONE_CLICK)
+/** Fire khi user click số điện thoại, giữ nguyên callback chuyển hướng theo snippet của Google Ads */
+export function trackPhoneClick(url?: string) {
+  if (typeof window === 'undefined') return false
+
+  const callback = () => {
+    if (typeof url !== 'undefined') {
+      window.location.href = url
+    }
+  }
+
+  if (typeof window.gtag !== 'function') {
+    callback()
+    return false
+  }
+
+  window.gtag('event', 'conversion', {
+    send_to: CONVERSION.PHONE_CLICK,
+    value: 1.0,
+    currency: 'VND',
+    event_callback: callback,
+  })
+
+  window.setTimeout(callback, 1000)
+  return false
 }
 
 /** Fire khi Formspree xác nhận form submit thành công — fire cả 2 actions */
@@ -35,4 +56,3 @@ export function trackFormSubmit() {
   fireConversion(CONVERSION.FORM_SUBMIT)
   fireConversion(CONVERSION.FORM_SUBMIT_1)
 }
-

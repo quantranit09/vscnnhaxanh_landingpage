@@ -1,5 +1,6 @@
 import { Phone, Mail, Clock, MapPin } from 'lucide-react'
 import Image from 'next/image'
+import { PhoneLink } from '@/components/ui'
 
 const services = [
   { name: 'Vệ sinh văn phòng', href: '#dich-vu' },
@@ -61,9 +62,9 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/75 text-sm">
                 <Phone size={16} className="shrink-0 text-[#5AB645]" />
-                <a href="tel:+84934997265" className="hover:text-white font-medium transition-colors">
+                <PhoneLink href="tel:+84934997265" className="hover:text-white font-medium transition-colors">
                   0934.997.265
-                </a>
+                </PhoneLink>
               </li>
               <li className="flex items-center gap-3 text-white/75 text-sm">
                 <Mail size={16} className="shrink-0 text-[#5AB645]" />

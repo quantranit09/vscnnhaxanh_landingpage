@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { PhoneLink } from "@/components/ui";
 
 const navLinks = [
   { name: "Dịch vụ", href: "#dich-vu" },
@@ -52,13 +53,13 @@ export function Header() {
 
         {/* Desktop Hotline */}
         <div className="hidden md:flex items-center">
-          <a
+          <PhoneLink
             href="tel:+84934997265"
             className="flex items-center gap-2 bg-[#2D8B3A] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#1E6B2A] transition-colors shadow-md text-sm"
           >
             <Phone size={16} />
             <span>0934.997.265</span>
-          </a>
+          </PhoneLink>
         </div>
 
         {/* Mobile toggle */}
@@ -84,13 +85,13 @@ export function Header() {
               {link.name}
             </a>
           ))}
-          <a
+          <PhoneLink
             href="tel:+84934997265"
             className="flex items-center justify-center gap-2 bg-[#2D8B3A] text-white px-6 py-3.5 rounded-lg font-bold text-base mt-2"
           >
             <Phone size={20} />
             Gọi Ngay: 0934.997.265
-          </a>
+          </PhoneLink>
         </div>
       )}
     </header>

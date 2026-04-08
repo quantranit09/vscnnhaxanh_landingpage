@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Building2, Factory, HardHat, Home, CalendarCheck, ChevronRight } from 'lucide-react'
-import { SectionTitle } from '@/components/ui'
+import { PhoneLink, SectionTitle } from '@/components/ui'
 import Image from 'next/image'
 
 const services = [
@@ -154,12 +154,12 @@ export function Services() {
               <p className="text-gray-900 font-bold mb-1">Không tìm thấy dịch vụ phù hợp?</p>
               <p className="text-[#4A5A4A] text-sm">Đội ngũ chuyên viên của chúng tôi luôn sẵn sàng hỗ trợ khảo sát và tư vấn giải pháp đo ni đóng giày cho bạn.</p>
             </div>
-            <a
+            <PhoneLink
               href="tel:+84934997265"
               className="mt-4 sm:mt-0 shrink-0 inline-flex items-center gap-2 bg-[#2D8B3A] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1E6B2A] transition-colors shadow-md hover:shadow-lg w-full sm:w-auto justify-center"
             >
               Gọi Tư Vấn Ngay
-            </a>
+            </PhoneLink>
           </div>
         </motion.div>
       </div>

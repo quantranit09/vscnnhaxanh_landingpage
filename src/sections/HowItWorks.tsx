@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Phone, FileSignature, CheckCircle, ArrowRight } from 'lucide-react'
-import { SectionTitle } from '@/components/ui'
+import { PhoneLink, SectionTitle } from '@/components/ui'
 
 const steps = [
   {
@@ -106,12 +106,12 @@ export function HowItWorks() {
                 Liên hệ ngay — nhân viên tư vấn phản hồi trong 30 phút
               </div>
             </div>
-            <a
+            <PhoneLink
               href="tel:+84934997265"
               className="shrink-0 bg-white text-[#2D8B3A] px-7 py-3.5 rounded-xl font-bold hover:bg-[#F5F7F5] transition-colors whitespace-nowrap shadow-sm"
             >
               Gọi: 0934.997.265
-            </a>
+            </PhoneLink>
           </div>
         </motion.div>
       </div>

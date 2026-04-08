@@ -1,6 +1,7 @@
 'use client'
 
 import { Phone } from 'lucide-react'
+import { PhoneLink } from '@/components/ui'
 
 export function FloatingCTA() {
   return (
@@ -27,7 +28,7 @@ export function FloatingCTA() {
         {/* Subtle pulse ring */}
         <div className="absolute inset-[-6px] bg-[#2D8B3A]/20 rounded-full animate-ping opacity-40"></div>
         
-        <a
+        <PhoneLink
           href="tel:+84934997265"
           className="h-[48px] md:h-[56px] flex items-center bg-[#2D8B3A] border-2 border-white text-white rounded-full 
                    shadow-xl hover:bg-[#1E6B2A] transition-colors relative z-10 px-3 md:px-5"
@@ -40,9 +41,8 @@ export function FloatingCTA() {
           <span className="hidden md:inline font-extrabold text-base tracking-wide whitespace-nowrap">
             0934.997.265
           </span>
-        </a>
+        </PhoneLink>
       </div>
     </div>
   )
 }
-

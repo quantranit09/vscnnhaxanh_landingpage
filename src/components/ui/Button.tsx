@@ -50,7 +50,7 @@ export function Button({
 
   if (href && !disabled) {
     return (
-      <a href={href} className={classes} target={target} rel={rel}>
+      <a href={href} onClick={onClick} className={classes} target={target} rel={rel}>
         {children}
       </a>
     )

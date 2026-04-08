@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { PhoneLink } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Chính Sách Bảo Mật | Công ty TNHH TM XD DV Nhà Xanh',
@@ -69,9 +70,9 @@ export default function ChinhSachBaoMatPage() {
           <ul className="space-y-2">
             <li>
               📞 Hotline:{' '}
-              <a href="tel:+84934997265" className="text-[#2D8B3A] hover:underline font-medium">
+              <PhoneLink href="tel:+84934997265" className="text-[#2D8B3A] hover:underline font-medium">
                 0934.997.265
-              </a>
+              </PhoneLink>
             </li>
             <li>
               📧 Email:{' '}
