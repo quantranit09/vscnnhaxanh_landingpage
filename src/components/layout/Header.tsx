@@ -28,11 +28,11 @@ export function Header() {
             height={40}
             className="w-10 h-10 object-contain"
           />
-          <div>
+          <div className="flex flex-col flex-1 min-w-0 pr-2">
             <div className="text-lg font-extrabold text-[#2D8B3A] leading-tight">
               NHÀ XANH
             </div>
-            <div className="text-[10px] text-[#4A5A4A] leading-tight hidden sm:block font-medium">
+            <div className="text-[9px] sm:text-[10px] text-[#4A5A4A] leading-[1.2] font-medium w-full truncate sm:whitespace-normal">
               CÔNG TY TNHH TM XD DV NHÀ XANH
             </div>
           </div>

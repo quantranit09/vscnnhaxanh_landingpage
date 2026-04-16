@@ -46,18 +46,19 @@ export function Hero() {
               href="tel:+84934997265" 
               onClick={() => trackPhoneClick('tel:+84934997265')}
               size="lg" 
-              className="h-14 px-8 text-base shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/40 transition-shadow rounded-2xl"
+              className="h-14 px-8 text-base shadow-xl shadow-emerald-500/30 hover:shadow-emerald-500/40 transition-all hover:-translate-y-1 rounded-2xl relative overflow-hidden group"
             >
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-all duration-1000 ease-out"></div>
               <Phone size={20} className="mr-2" />
-              Gọi Ngay 0934.997.265
+              Tư vấn ngay trong 30s
             </Button>
             <Button 
               href="#lien-he" 
               variant="outline" 
               size="lg" 
-              className="h-14 px-8 text-base border-2 border-emerald-100 bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 rounded-2xl"
+              className="h-14 px-8 text-base border-2 border-emerald-100 bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 rounded-2xl transition-all hover:-translate-y-1"
             >
-              Nhận Báo Giá Miễn Phí
+              Để lại SĐT gọi lại
               <ArrowRight size={20} className="ml-2" />
             </Button>
           </div>

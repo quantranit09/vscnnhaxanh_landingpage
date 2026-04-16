@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useForm, ValidationError } from '@formspree/react'
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ArrowRight } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ArrowRight, Star } from 'lucide-react'
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { Button } from '@/components/ui/Button'
 
@@ -16,11 +16,11 @@ const contactInfo = [
 ]
 
 export function Contact() {
-  const [state, handleSubmit] = useForm("xbdpyjdg") // Thay bằng ID Formspree thật
+  const [state, handleSubmit] = useForm("xbdpyjdg")
   const [phoneWarning, setPhoneWarning] = useState('')
 
   return (
-    <section id="lien-he" className="py-20 md:py-28 bg-[#FAFCFB] border-t border-emerald-50">
+    <section className="py-20 md:py-28 bg-[#FAFCFB] border-t border-emerald-50">
       <div className="container max-w-[1200px]">
         <SectionTitle
           badge="Liên Hệ Ngay"
@@ -69,7 +69,7 @@ export function Contact() {
           </div>
 
           {/* Right: Ultra-Modern Form */}
-          <div className="lg:col-span-3 p-8 md:p-12 lg:p-14 xl:p-16 flex flex-col justify-center">
+          <div id="lien-he" className="lg:col-span-3 p-8 md:p-12 lg:p-14 xl:p-16 flex flex-col justify-center scroll-mt-24">
             {state.succeeded ? (
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -145,36 +145,6 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-5 mt-3">
-                  {/* Service Select */}
-                  <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-3 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
-                    <label htmlFor="service" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1">Dịch Vụ Quan Tâm</label>
-                    <select 
-                      id="service" 
-                      name="service"
-                      className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 appearance-none cursor-pointer"
-                    >
-                      <option value="Chưa xác định" className="font-medium text-gray-500">-- Vui lòng chọn --</option>
-                      <option value="Vệ sinh văn phòng" className="font-medium">Vệ sinh văn phòng định kỳ</option>
-                      <option value="Vệ sinh nhà xưởng" className="font-medium">Vệ sinh nhà xưởng</option>
-                      <option value="Vệ sinh sau xây dựng" className="font-medium">Vệ sinh sau xây dựng</option>
-                      <option value="Dọn nhà tổng thể" className="font-medium">Dọn nhà cửa tổng thể</option>
-                      <option value="Giặt thảm sofa" className="font-medium">Giặt thảm / ghế sofa</option>
-                    </select>
-                  </div>
-                  
-                  {/* Area Input */}
-                  <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-3 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
-                    <label htmlFor="area" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1">Diện Tích Ước Tính (m²)</label>
-                    <input 
-                      id="area" 
-                      name="area" 
-                      type="number" 
-                      className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-medium"
-                      placeholder="Ví dụ: 150" 
-                    />
-                  </div>
-                </div>
 
                 {/* Message Textarea */}
                 <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-4 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200 mt-3">
@@ -206,14 +176,17 @@ export function Contact() {
                       <span className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
                     ) : (
                       <>
-                        Gửi Yêu Cầu Báo Giá
-                        <Send size={18} className="ml-1" />
+                        Yêu Cầu Gọi Lại Ngay
+                        <Phone size={18} className="ml-1" />
                       </>
                     )}
                   </Button>
                 </div>
                 
-                <p className="text-[13px] text-center text-gray-400 font-medium mt-6">
+                <p className="text-[14px] text-center text-gray-700 font-semibold mt-5 flex items-center justify-center gap-1.5">
+                  <Star className="text-amber-500 fill-amber-500" size={16} /> 500+ khách hàng đã tin dùng dịch vụ
+                </p>
+                <p className="text-[12px] text-center text-gray-400 font-medium mt-2">
                   Dữ liệu được xử lý an toàn theo <a href="/chinh-sach-bao-mat" className="underline underline-offset-2 hover:text-[#2D8B3A] transition-colors">chính sách bảo mật</a>.
                 </p>
               </form>
