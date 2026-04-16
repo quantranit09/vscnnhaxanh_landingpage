@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useForm, ValidationError } from '@formspree/react'
@@ -18,6 +18,24 @@ const contactInfo = [
 export function Contact() {
   const [state, handleSubmit] = useForm("xbdpyjdg")
   const [phoneWarning, setPhoneWarning] = useState('')
+  const [nameValue, setNameValue] = useState('')
+  const [btnPulse, setBtnPulse] = useState(false)
+  const submitRef = useRef<HTMLDivElement>(null)
+
+  const onPhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value.replace(/\D/g, '')
+    if (val.length > 0 && val.length < 10) {
+      setPhoneWarning('Số điện thoại thường có đúng 10 chữ số')
+    } else {
+      setPhoneWarning('')
+    }
+    // Auto-scroll to submit when phone is valid & name is filled
+    if (val.length === 10 && nameValue.trim().length > 0) {
+      setBtnPulse(true)
+      setTimeout(() => setBtnPulse(false), 1800)
+      submitRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
 
   return (
     <section className="py-20 md:py-28 bg-[#FAFCFB] border-t border-emerald-50">
@@ -113,6 +131,8 @@ export function Contact() {
                         name="name" 
                         type="text" 
                         required 
+                        value={nameValue}
+                        onChange={(e) => setNameValue(e.target.value)}
                         className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-medium"
                         placeholder="Nguyễn Văn A" 
                       />
@@ -133,11 +153,7 @@ export function Contact() {
                         required 
                         className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-medium"
                         placeholder="0934 xxx xxx" 
-                        onChange={(e) => {
-                          const val = e.target.value.replace(/\D/g,'')
-                          if(val.length > 0 && val.length < 10) setPhoneWarning('Số điện thoại thường có đúng 10 chữ số')
-                          else setPhoneWarning('')
-                        }}
+                        onChange={onPhoneChange}
                       />
                     </div>
                     {phoneWarning && <p className="text-amber-500 text-xs mt-1.5 ml-2 font-medium absolute">{phoneWarning}</p>}
@@ -165,11 +181,19 @@ export function Contact() {
                   </div>
                 )}
 
-                <div className="pt-6">
+                <div ref={submitRef} className="pt-6 relative">
+                  {/* Pulse ring when ready to submit */}
+                  {btnPulse && (
+                    <span className="absolute inset-0 rounded-2xl animate-ping bg-[#2D8B3A]/30 pointer-events-none" />
+                  )}
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full h-[60px] flex items-center justify-center gap-2 rounded-2xl text-base font-bold shadow-xl shadow-[#2D8B3A]/20 hover:shadow-[#2D8B3A]/30 hover:-translate-y-0.5 transition-all"
+                    className={`w-full h-[60px] flex items-center justify-center gap-2 rounded-2xl text-base font-bold shadow-xl transition-all
+                      ${ btnPulse
+                        ? 'shadow-[#2D8B3A]/50 scale-[1.02]'
+                        : 'shadow-[#2D8B3A]/20 hover:shadow-[#2D8B3A]/30 hover:-translate-y-0.5'
+                      }`}
                     disabled={state.submitting}
                   >
                     {state.submitting ? (

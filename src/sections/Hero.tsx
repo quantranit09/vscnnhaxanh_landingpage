@@ -13,13 +13,13 @@ const highlights = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center bg-[#F8FAF9] overflow-hidden pt-16 lg:pt-20">
+    <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center bg-[#F8FAF9] overflow-hidden pt-2 lg:pt-20">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[#E8F3EA] rounded-l-[120px] transform translate-x-12 opacity-50 hidden lg:block" />
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#5AB645]/10 rounded-full blur-[80px]" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#2D8B3A]/10 rounded-full blur-[100px]" />
 
-      <div className="container relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-6 lg:py-0">
+      <div className="container relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-2 lg:py-0">
         
         {/* Left Content — NO Framer Motion, pure CSS */}
         <div className="max-w-xl animate-[fadeInLeft_0.8s_ease-out_both]">
