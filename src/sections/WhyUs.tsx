@@ -67,7 +67,7 @@ const itemVariants = {
 
 export function WhyUs() {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section aria-label="Lý do chọn Nhà Xanh" className="py-20 md:py-28 bg-white">
       <div className="container">
         <SectionTitle
           badge="Tại Sao Chọn Nhà Xanh?"

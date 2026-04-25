@@ -22,9 +22,13 @@ const beVietnamPro = Be_Vietnam_Pro({
 })
 
 export const metadata: Metadata = {
-  title: 'Công ty TNHH TM XD DV Nhà Xanh | Dịch vụ vệ sinh Đà Nẵng',
+  metadataBase: new URL('https://vscnnhaxanhdanang.com'),
+  title: {
+    default: 'Vệ Sinh Công Nghiệp Đà Nẵng | Nhà Xanh – Báo Giá 30 Phút',
+    template: '%s | Nhà Xanh – Vệ Sinh Đà Nẵng',
+  },
   description:
-    'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh an toàn. Báo giá nhanh. Hotline: 0934.997.265',
+    'Dịch vụ vệ sinh công nghiệp Đà Nẵng uy tín: văn phòng, nhà xưởng, sau xây dựng, căn hộ, định kỳ. Hóa chất xanh chuẩn Châu Âu. Báo giá trong 30 phút – 100% hài lòng mới thanh toán. Hotline: 0934.997.265',
   keywords: [
     'vệ sinh công nghiệp đà nẵng',
     'dịch vụ vệ sinh văn phòng đà nẵng',
@@ -32,29 +36,53 @@ export const metadata: Metadata = {
     'vệ sinh sau xây dựng đà nẵng',
     'dọn dẹp nhà cửa đà nẵng',
     'công ty vệ sinh uy tín đà nẵng',
+    'vệ sinh căn hộ đà nẵng',
+    'vệ sinh định kỳ đà nẵng',
+    'dọn dẹp nhà theo giờ đà nẵng',
+    'vệ sinh kho bãi đà nẵng',
+    'giặt thảm ghế sofa đà nẵng',
+    'công ty nhà xanh đà nẵng',
   ],
   openGraph: {
-    title: 'Công ty TNHH TM XD DV Nhà Xanh | Vệ Sinh Công Nghiệp Đà Nẵng',
+    title: 'Vệ Sinh Công Nghiệp Đà Nẵng | Nhà Xanh – Báo Giá 30 Phút',
     description:
-      'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng. Báo giá trong 30 phút. Hóa chất xanh an toàn.',
+      'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng. Báo giá trong 30 phút. Hóa chất xanh chuẩn Châu Âu. 100% hài lòng mới thanh toán.',
     locale: 'vi_VN',
     type: 'website',
-    siteName: 'Công ty TNHH TM XD DV Nhà Xanh',
+    siteName: 'Nhà Xanh – Vệ Sinh Công Nghiệp Đà Nẵng',
     url: 'https://vscnnhaxanhdanang.com',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Nhà Xanh – Dịch Vụ Vệ Sinh Công Nghiệp Đà Nẵng',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Công ty TNHH TM XD DV Nhà Xanh | Vệ Sinh chuyên nghiệp',
+    title: 'Vệ Sinh Công Nghiệp Đà Nẵng | Nhà Xanh',
     description:
-      'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng. Báo giá trong 30 phút.',
+      'Vệ sinh văn phòng, nhà xưởng, sau xây dựng tại Đà Nẵng. Báo giá 30 phút. Hotline: 0934.997.265',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   alternates: {
     canonical: 'https://vscnnhaxanhdanang.com',
+  },
+  verification: {
+    google: 'p6UAbmyxrqfTqeUzElr5zgESQwEXl0Myc9kNDp8uKCU',
   },
 }
 

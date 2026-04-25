@@ -2,12 +2,14 @@ import { Phone, Mail, Clock, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import { PhoneLink } from '@/components/ui'
 
+import Link from 'next/link'
+
 const services = [
-  { name: 'Vệ sinh văn phòng', href: '#dich-vu' },
-  { name: 'Vệ sinh nhà xưởng', href: '#dich-vu' },
-  { name: 'Vệ sinh sau xây dựng', href: '#dich-vu' },
-  { name: 'Dọn dẹp nhà cửa', href: '#dich-vu' },
-  { name: 'Dọn dẹp định kỳ', href: '#dich-vu' },
+  { name: 'Vệ sinh văn phòng', href: '/ve-sinh-van-phong-da-nang' },
+  { name: 'Vệ sinh nhà xưởng', href: '/ve-sinh-nha-xuong-da-nang' },
+  { name: 'Vệ sinh sau xây dựng', href: '/ve-sinh-sau-xay-dung-da-nang' },
+  { name: 'Dọn dẹp nhà căn hộ', href: '/don-dep-nha-can-ho-da-nang' },
+  { name: 'Dọn dẹp định kỳ', href: '/ve-sinh-dinh-ky-da-nang' },
 ]
 
 export function Footer() {
@@ -40,13 +42,13 @@ export function Footer() {
             <ul className="space-y-2.5">
               {services.map((service) => (
                 <li key={service.name}>
-                  <a
+                  <Link
                     href={service.href}
                     className="text-white/75 hover:text-white transition-colors text-sm flex items-center gap-2"
                   >
                     <span className="w-1 h-1 bg-[#5AB645] rounded-full inline-block shrink-0" />
                     {service.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

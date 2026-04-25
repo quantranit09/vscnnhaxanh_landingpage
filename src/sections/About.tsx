@@ -11,7 +11,7 @@ const districts = [
 
 export function About() {
   return (
-    <section className="py-20 md:py-28 bg-white overflow-hidden">
+    <section id="gioi-thieu" aria-label="Giới thiệu về Nhà Xanh" className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Content */}
@@ -25,7 +25,7 @@ export function About() {
               Về Chúng Tôi
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
-              Nhà Xanh — Tiêu Chuẩn Nâng Tầm Không Gian Sống
+              Nhà Xanh — Tiêu Chuẩn Nâng Tầm Không Gian Sống & Làm Việc
             </h2>
             <div className="space-y-5 text-[#4A5A4A] leading-relaxed mb-8">
               <p>

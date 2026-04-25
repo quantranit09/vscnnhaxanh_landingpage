@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Building2, Factory, HardHat, Home, CalendarCheck, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 import { PhoneLink, SectionTitle } from '@/components/ui'
 import Image from 'next/image'
 
@@ -14,6 +15,7 @@ const services = [
     tag: 'Phổ biến nhất',
     tagColor: 'bg-[#2D8B3A] text-white',
     image: '/images/service-office.jpg',
+    slug: 've-sinh-van-phong-da-nang',
   },
   {
     icon: Factory,
@@ -23,6 +25,7 @@ const services = [
     tag: 'Cho doanh nghiệp',
     tagColor: 'bg-blue-600 text-white',
     image: '/images/service-kitchen-restaurant.jpg',
+    slug: 've-sinh-nha-xuong-da-nang',
   },
   {
     icon: HardHat,
@@ -32,6 +35,7 @@ const services = [
     tag: null,
     tagColor: '',
     image: '/images/service-post-construction.jpg',
+    slug: 've-sinh-sau-xay-dung-da-nang',
   },
   {
     icon: Home,
@@ -41,6 +45,7 @@ const services = [
     tag: null,
     tagColor: '',
     image: '/images/service-apartment.jpg',
+    slug: 'don-dep-nha-can-ho-da-nang',
   },
   {
     icon: CalendarCheck,
@@ -50,6 +55,7 @@ const services = [
     tag: 'Tiết kiệm nhất',
     tagColor: 'bg-amber-500 text-white',
     image: '/images/service-periodic-house.jpg',
+    slug: 've-sinh-dinh-ky-da-nang',
   },
 ]
 
@@ -101,7 +107,7 @@ export function Services() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300 z-0"></div>
                 <Image 
                   src={service.image} 
-                  alt={service.name} 
+                  alt={`${service.name} tại Đà Nẵng – Nhà Xanh`} 
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
@@ -122,13 +128,13 @@ export function Services() {
                   {service.description}
                 </p>
 
-                <a
-                  href="#lien-he"
+                <Link
+                  href={`/${service.slug}`}
                   className="inline-flex items-center gap-2 text-[#2D8B3A] font-bold text-sm hover:gap-4 transition-all duration-300 mt-auto bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-xl w-fit"
                 >
-                  Nhận báo giá
+                  Xem chi tiết & báo giá
                   <ChevronRight size={16} />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}
