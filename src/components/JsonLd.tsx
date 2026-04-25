@@ -16,11 +16,11 @@ export function JsonLd() {
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 30 },
     image: [
       'https://vscnnhaxanhdanang.com/og-image.jpg',
-      'https://vscnnhaxanhdanang.com/images/hero-team-polishing.jpg',
+      'https://vscnnhaxanhdanang.com/images/hero-team-polishing.webp',
     ],
     logo: {
       '@type': 'ImageObject',
-      url: 'https://vscnnhaxanhdanang.com/images/logo.png',
+      url: 'https://vscnnhaxanhdanang.com/images/logo.webp',
       width: 200,
       height: 200,
     },

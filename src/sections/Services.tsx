@@ -14,7 +14,7 @@ const services = [
       'Vệ sinh toàn bộ văn phòng, tòa nhà và tầng hầm. Lau kính, cọ rửa sàn, khử trùng bề mặt tiếp xúc. Phục vụ linh hoạt theo ca hoặc định kỳ hàng tuần.',
     tag: 'Phổ biến nhất',
     tagColor: 'bg-[#2D8B3A] text-white',
-    image: '/images/service-office.jpg',
+    image: '/images/service-office.webp',
     slug: 've-sinh-van-phong-da-nang',
   },
   {
@@ -24,7 +24,7 @@ const services = [
       'Xử lý dầu mỡ, bụi công nghiệp và chất thải sản xuất. Thiết bị chuyên dụng cho sàn epoxy, máy móc và kho hàng. Đảm bảo an toàn với hàng hóa.',
     tag: 'Cho doanh nghiệp',
     tagColor: 'bg-blue-600 text-white',
-    image: '/images/service-kitchen-restaurant.jpg',
+    image: '/images/service-kitchen-restaurant.webp',
     slug: 've-sinh-nha-xuong-da-nang',
   },
   {
@@ -34,7 +34,7 @@ const services = [
       'Dọn sạch bụi xi măng, sơn, keo silicon sau công trình xây dựng hoặc cải tạo. Đánh bóng sàn đá, lau kính, vệ sinh thiết bị vệ sinh. Bàn giao trong 24 giờ.',
     tag: null,
     tagColor: '',
-    image: '/images/service-post-construction.jpg',
+    image: '/images/service-post-construction.webp',
     slug: 've-sinh-sau-xay-dung-da-nang',
   },
   {
@@ -44,7 +44,7 @@ const services = [
       'Vệ sinh toàn bộ không gian sống: bếp, phòng ngủ, phòng tắm. Hóa chất xanh an toàn tuyệt đối cho trẻ em và vật nuôi. Phục vụ tại nhà theo giờ.',
     tag: null,
     tagColor: '',
-    image: '/images/service-apartment.jpg',
+    image: '/images/service-apartment.webp',
     slug: 'don-dep-nha-can-ho-da-nang',
   },
   {
@@ -54,7 +54,7 @@ const services = [
       'Ký hợp đồng định kỳ theo tuần hoặc tháng — tiết kiệm 20% so với đặt lẻ. Nhân viên cố định, am hiểu không gian của bạn. Xuất hóa đơn VAT.',
     tag: 'Tiết kiệm nhất',
     tagColor: 'bg-amber-500 text-white',
-    image: '/images/service-periodic-house.jpg',
+    image: '/images/service-periodic-house.webp',
     slug: 've-sinh-dinh-ky-da-nang',
   },
 ]
@@ -160,8 +160,8 @@ export function Services() {
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-white p-6 sm:p-4 sm:pr-6 rounded-2xl shadow-sm border border-emerald-100 max-w-3xl mx-auto">
             <div className="flex -space-x-3 sm:ml-2">
-              <Image src="https://i.pravatar.cc/100?img=1" alt="Nhân viên" width={48} height={48} className="w-12 h-12 rounded-full border-2 border-white object-cover" unoptimized />
-              <Image src="https://i.pravatar.cc/100?img=5" alt="Nhân viên" width={48} height={48} className="w-12 h-12 rounded-full border-2 border-white object-cover" unoptimized />
+              <Image src="https://i.pravatar.cc/100?img=1" alt="Nhân viên" width={48} height={48} className="w-12 h-12 rounded-full border-2 border-white object-cover" />
+              <Image src="https://i.pravatar.cc/100?img=5" alt="Nhân viên" width={48} height={48} className="w-12 h-12 rounded-full border-2 border-white object-cover" />
               <div className="w-12 h-12 rounded-full border-2 border-white bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-xs">
                 30+
               </div>

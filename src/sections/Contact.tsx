@@ -52,7 +52,7 @@ export function Contact() {
             {/* Background Image */}
             <div className="absolute inset-0">
               <Image 
-                src="/images/building-exterior-curve.jpg" 
+                src="/images/building-exterior-curve.webp" 
                 alt="Công trình vệ sinh Nhà Xanh" 
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -64,7 +64,7 @@ export function Contact() {
             
             <div className="relative z-10">
               <div className="w-12 h-12 bg-white backdrop-blur-sm rounded-2xl flex items-center justify-center mb-8 border border-white/30 shadow-xl overflow-hidden p-0.5 relative">
-                <Image src="/images/logo.png" alt="Nhà Xanh Logo" width={48} height={48} className="w-full h-full object-contain" />
+                <Image src="/images/logo.webp" alt="Nhà Xanh Logo" width={48} height={48} className="w-full h-full object-contain" />
               </div>
               <h3 className="text-3xl font-extrabold mb-4 leading-tight">Giải pháp vệ sinh<br/>chuyên nghiệp.</h3>
               <p className="text-emerald-50/80 mb-12 text-sm leading-relaxed max-w-sm">

@@ -116,12 +116,12 @@ export function Hero() {
           <div className="relative w-full h-[400px] lg:h-full rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
             <div className="absolute inset-0 bg-emerald-900/10 z-10 mix-blend-overlay"></div>
             <Image 
-              src="/images/hero-team-polishing.jpg" 
+              src="/images/hero-team-polishing.webp" 
               alt="Dịch vụ vệ sinh công nghiệp Đà Nẵng chuyên nghiệp - Đội ngũ Nhà Xanh" 
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover scale-105 hover:scale-100 transition-transform duration-1000"
+              className="object-cover"
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
@@ -143,7 +143,7 @@ export function Hero() {
             <div className="flex -space-x-3">
               {[1, 2, 3].map((i) => (
                 <div key={i} className={`w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden`}>
-                  <Image src={`https://i.pravatar.cc/100?img=${i + 15}`} alt="Khách hàng" width={40} height={40} className="w-full h-full object-cover" unoptimized />
+                  <Image src={`https://i.pravatar.cc/100?img=${i + 15}`} alt="Khách hàng" width={40} height={40} className="w-full h-full object-cover" />
                 </div>
               ))}
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] md:text-xs">

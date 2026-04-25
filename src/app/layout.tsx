@@ -3,8 +3,8 @@ import { Be_Vietnam_Pro } from 'next/font/google'
 import Script from 'next/script'
 import { Header } from '@/components/layout'
 import { Footer } from '@/components/layout'
-import { FloatingCTA } from '@/components/layout'
 import { AnnouncementBar } from '@/components/layout'
+import { ClientFloatingCTA } from '@/components/layout/ClientFloatingCTA'
 import { JsonLd } from '@/components/JsonLd'
 import './globals.css'
 
@@ -17,8 +17,11 @@ const GOOGLE_ADS_ID = 'AW-11498445959' // Google Ads Conversion ID
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ['vietnamese', 'latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  // Reduced from 5 weights to 4 — each weight = 1 extra .woff2 file in the critical font chain (~710ms each)
+  // Removed: 500 (font-medium) — visually falls back to 400 with negligible difference
+  weight: ['400', '600', '700', '800'],
   display: 'swap',
+  preload: true,
   variable: '--font-be-vietnam-pro',
 })
 
@@ -94,6 +97,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi" className={beVietnamPro.variable} suppressHydrationWarning>
+      {/* Phase 3: preconnect hints — pre-warm TCP before GTM/GA scripts fire */}
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="https://zalo.me" />
       <body className="font-sans antialiased">
         {/* Google Tag Manager (noscript fallback) */}
         <noscript>
@@ -109,11 +117,11 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <FloatingCTA />
+        <ClientFloatingCTA />
         <JsonLd />
 
         {/* ── Google Tag Manager ── */}
-        {/* GTM-K6DGNWC5 quản lý: GA4 (G-PSXK2E5C55) + Google Ads (AW-11498445959) */}
+        {/* GTM-K6DGNWC5 manages: GA4 (G-PSXK2E5C55) + Google Ads (AW-11498445959) */}
         <Script id="gtm-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -122,23 +130,6 @@ export default function RootLayout({
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','${GTM_ID}');
-          `}
-        </Script>
-
-        {/* ── Google Tag (gtag.js) — GA4 + Google Ads xác minh domain ── */}
-        {/* Cần thiết để Google Ads detect tag trên website */}
-        <Script
-          id="gtag-js"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-config" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA4_ID}');
-            gtag('config', '${GOOGLE_ADS_ID}');
           `}
         </Script>
         {/* ── END Scripts ── */}

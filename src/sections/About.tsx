@@ -78,10 +78,10 @@ export function About() {
             <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-[#F5F7F5] relative border border-gray-100 shadow-sm">
               {/* Replaced with Next Image */}
               <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                 <Image src="/images/about-team-working.jpg" alt="Đội ngũ Nhà Xanh đang làm vệ sinh" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover z-0" />
+                 <Image src="/images/about-team-working.webp" alt="Đội ngũ Nhà Xanh đang làm vệ sinh" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover z-0" />
                  <div className="absolute inset-0 bg-[#2D8B3A]/80 mix-blend-multiply z-10"></div>
                 <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center rotate-12 mb-6 z-20 shadow-xl overflow-hidden p-2 relative">
-                  <Image src="/images/logo.png" alt="Nhà Xanh Logo" width={80} height={80} className="w-full h-full object-contain -rotate-12" />
+                  <Image src="/images/logo.webp" alt="Nhà Xanh Logo" width={80} height={80} className="w-full h-full object-contain -rotate-12" />
                 </div>
                 <p className="text-white font-bold text-2xl mb-2 z-20 relative">Đội ngũ chuyên nghiệp</p>
                 <p className="text-white/90 text-sm max-w-xs z-20 relative">Liên tục đào tạo để mang lại chất lượng phục vụ tốt nhất.</p>

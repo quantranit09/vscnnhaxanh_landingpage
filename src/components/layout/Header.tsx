@@ -22,7 +22,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Nhà Xanh Logo"
             width={40}
             height={40}

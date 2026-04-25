@@ -21,7 +21,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-0.5">
-                <Image src="/images/logo.png" alt="Nhà Xanh Logo" width={40} height={40} className="w-full h-full object-contain" />
+                <Image src="/images/logo.webp" alt="Nhà Xanh Logo" width={40} height={40} className="w-full h-full object-contain" />
               </div>
               <div>
                 <div className="text-xl font-extrabold leading-tight">NHÀ XANH</div>

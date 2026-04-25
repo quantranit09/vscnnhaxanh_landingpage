@@ -10,7 +10,16 @@ export function FloatingCTA() {
   const [showTop, setShowTop] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setShowTop(window.scrollY > 300)
+    let ticking = false
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setShowTop(window.scrollY > 300)
+          ticking = false
+        })
+        ticking = true
+      }
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -49,6 +58,7 @@ export function FloatingCTA() {
             src="/images/Logo-Zalo-Arc.webp" 
             alt="Chat Zalo" 
             fill
+            sizes="56px"
             className="object-cover"
           />
           <span className="absolute right-[calc(100%+0.75rem)] top-1/2 -translate-y-1/2 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap shadow-md">
@@ -59,7 +69,10 @@ export function FloatingCTA() {
 
         {/* Phone Button */}
         <div className="pointer-events-auto relative flex items-center self-end">
-          <div className="absolute inset-[-6px] bg-[#2D8B3A]/20 rounded-full animate-ping opacity-40"></div>
+          <div
+            className="absolute inset-[-6px] bg-[#2D8B3A]/20 rounded-full animate-ping opacity-40"
+            style={{ willChange: 'transform, opacity' }}
+          />
           <PhoneLink
             href="tel:+84934997265"
             className="h-[56px] flex items-center bg-[#2D8B3A] border-2 border-white text-white rounded-full
@@ -122,7 +135,7 @@ export function FloatingCTA() {
           className="w-[52px] h-[52px] shrink-0 relative rounded-[18px] overflow-hidden shadow-md active:scale-95 transition-transform"
           aria-label="Chat Zalo"
         >
-          <Image src="/images/Logo-Zalo-Arc.webp" alt="Zalo" fill className="object-cover" />
+          <Image src="/images/Logo-Zalo-Arc.webp" alt="Zalo" fill sizes="52px" className="object-cover" />
         </a>
       </div>
     </>

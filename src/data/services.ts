@@ -33,7 +33,7 @@ export const SERVICES: ServiceData[] = [
     metaDescription:
       'Dịch vụ vệ sinh văn phòng chuyên nghiệp tại Đà Nẵng: lau kính, cọ sàn, khử trùng bề mặt, giặt thảm. Phục vụ theo ca hoặc định kỳ. Báo giá trong 30 phút. Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
-    heroImage: '/images/service-office.jpg',
+    heroImage: '/images/service-office.webp',
     price: 'Từ 12,000đ',
     priceUnit: '/m²/tháng',
     priceDetail:
@@ -78,7 +78,7 @@ export const SERVICES: ServiceData[] = [
     metaDescription:
       'Vệ sinh nhà xưởng, kho bãi công nghiệp tại Đà Nẵng: xử lý dầu mỡ, bụi, sàn epoxy, máy móc. Thiết bị chuyên dụng. Xuất hóa đơn VAT. Báo giá trong 30 phút.',
     ogImage: '/og-image.jpg',
-    heroImage: '/images/service-kitchen-restaurant.jpg',
+    heroImage: '/images/service-kitchen-restaurant.webp',
     price: 'Từ 8,000đ',
     priceUnit: '/m²',
     priceDetail:
@@ -122,7 +122,7 @@ export const SERVICES: ServiceData[] = [
     metaDescription:
       'Vệ sinh sau xây dựng, sau cải tạo tại Đà Nẵng: tẩy xi măng, sơn, keo silicon, đánh bóng sàn đá. Bàn giao trong 24h. Từ 15,000đ/m². Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
-    heroImage: '/images/service-post-construction.jpg',
+    heroImage: '/images/service-post-construction.webp',
     price: 'Từ 15,000đ',
     priceUnit: '/m²',
     priceDetail:
@@ -166,7 +166,7 @@ export const SERVICES: ServiceData[] = [
     metaDescription:
       'Dịch vụ dọn dẹp nhà cửa, căn hộ tại Đà Nẵng: bếp, phòng ngủ, phòng tắm. Hóa chất xanh an toàn cho trẻ em và vật nuôi. Phục vụ theo giờ tại nhà. Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
-    heroImage: '/images/service-apartment.jpg',
+    heroImage: '/images/service-apartment.webp',
     price: 'Từ 1,200,000đ',
     priceUnit: '/gói',
     priceDetail:
@@ -210,7 +210,7 @@ export const SERVICES: ServiceData[] = [
     metaDescription:
       'Dịch vụ vệ sinh định kỳ theo tuần, tháng tại Đà Nẵng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20% so với đặt lẻ. Xuất hóa đơn VAT. Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
-    heroImage: '/images/service-periodic-house.jpg',
+    heroImage: '/images/service-periodic-house.webp',
     price: 'Từ 12,000đ',
     priceUnit: '/m²/tháng',
     priceDetail:
