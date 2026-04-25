@@ -8,6 +8,14 @@
     "start": "next start",
     "lint": "eslint"
   },
+  "browserslist": [
+    "chrome >= 87",
+    "firefox >= 78",
+    "safari >= 14",
+    "edge >= 88",
+    "not IE 11",
+    "not op_mini all"
+  ],
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@tailwindcss/postcss": "^4.2.2",
