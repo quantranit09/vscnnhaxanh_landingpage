@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Header } from '@/components/layout'
 import { Footer } from '@/components/layout'
 import { FloatingCTA } from '@/components/layout'
+import { AnnouncementBar } from '@/components/layout'
 import { JsonLd } from '@/components/JsonLd'
 import './globals.css'
 
@@ -104,6 +105,7 @@ export default function RootLayout({
           />
         </noscript>
         {/* End GTM noscript */}
+        <AnnouncementBar />
         <Header />
         <main>{children}</main>
         <Footer />

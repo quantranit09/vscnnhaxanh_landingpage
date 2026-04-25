@@ -79,6 +79,18 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Shimmer sweep — used by FloatingCTA mobile button */
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* Slide up from below — used by urgency badges */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* Fallback: if Framer Motion whileInView fails (Safari),
    force any element stuck at opacity:0 to become visible */
 section [style*="opacity: 0"],

@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useForm, ValidationError } from '@formspree/react'
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ArrowRight, Star } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, CheckCircle2, ArrowRight, Star } from 'lucide-react'
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { Button } from '@/components/ui/Button'
 
@@ -18,7 +18,6 @@ const contactInfo = [
 export function Contact() {
   const [state, handleSubmit] = useForm("xbdpyjdg")
   const [phoneWarning, setPhoneWarning] = useState('')
-  const [nameValue, setNameValue] = useState('')
   const [btnPulse, setBtnPulse] = useState(false)
   const submitRef = useRef<HTMLDivElement>(null)
 
@@ -29,8 +28,8 @@ export function Contact() {
     } else {
       setPhoneWarning('')
     }
-    // Auto-scroll to submit when phone is valid & name is filled
-    if (val.length === 10 && nameValue.trim().length > 0) {
+    // Auto-pulse & scroll when phone is valid
+    if (val.length === 10) {
       setBtnPulse(true)
       setTimeout(() => setBtnPulse(false), 1800)
       submitRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -89,7 +88,7 @@ export function Contact() {
           {/* Right: Ultra-Modern Form */}
           <div id="lien-he" className="lg:col-span-3 p-8 md:p-12 lg:p-14 xl:p-16 flex flex-col justify-center scroll-mt-24">
             {state.succeeded ? (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="h-full flex flex-col items-center justify-center text-center py-12"
@@ -101,9 +100,9 @@ export function Contact() {
                 <p className="text-gray-500 mb-10 leading-relaxed text-[17px]">
                   Yêu cầu của bạn đã được ghi nhận. Chuyên viên Nhà Xanh sẽ liên hệ với bạn trong ít phút tới.
                 </p>
-                <Button 
-                  onClick={() => window.location.reload()} 
-                  variant="outline" 
+                <Button
+                  onClick={() => window.location.reload()}
+                  variant="outline"
                   size="lg"
                   className="rounded-2xl border-2 hover:bg-gray-50 h-14 px-8 font-semibold"
                 >
@@ -112,67 +111,67 @@ export function Contact() {
                 </Button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                
-                <div className="mb-10">
-                  <h3 className="text-[28px] font-extrabold text-gray-900 mb-3 tracking-tight">Gửi Yêu Cầu</h3>
-                  <p className="text-gray-500 text-[15px]">Mọi thông tin đều được bảo mật. Báo giá hoàn toàn miễn phí.</p>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-5">
-                  {/* Name Input */}
-                  <div className="relative group">
-                    <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-3 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
-                      <label htmlFor="name" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1">
-                        Họ và Tên <span className="text-red-500">*</span>
-                      </label>
-                      <input 
-                        id="name" 
-                        name="name" 
-                        type="text" 
-                        required 
-                        value={nameValue}
-                        onChange={(e) => setNameValue(e.target.value)}
-                        className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-medium"
-                        placeholder="Nguyễn Văn A" 
-                      />
+              <>
+                {/* ── PRIMARY: Direct call block ── */}
+                <div className="bg-emerald-50 border-2 border-emerald-200 rounded-3xl p-5 mb-6 text-center">
+                  <p className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2">
+                    Cách nhanh nhất
+                  </p>
+                  <a
+                    href="tel:+84934997265"
+                    className="group inline-flex items-center justify-center gap-3 text-[#2D8B3A] hover:text-[#1E6B2A] transition-colors"
+                  >
+                    <div className="relative">
+                      <span className="absolute -inset-2 rounded-full bg-emerald-300/40 animate-ping" />
+                      <Phone size={26} className="fill-[#2D8B3A] relative z-10" />
                     </div>
-                    <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-xs mt-1.5 ml-2 font-medium absolute" />
-                  </div>
-                  
-                  {/* Phone Input */}
-                  <div className="relative group">
-                    <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-3 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
-                      <label htmlFor="phone" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1">
-                        Số Điện Thoại <span className="text-red-500">*</span>
-                      </label>
-                      <input 
-                        id="phone" 
-                        name="phone" 
-                        type="tel" 
-                        required 
-                        className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-medium"
-                        placeholder="0934 xxx xxx" 
-                        onChange={onPhoneChange}
-                      />
-                    </div>
-                    {phoneWarning && <p className="text-amber-500 text-xs mt-1.5 ml-2 font-medium absolute">{phoneWarning}</p>}
-                    <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-500 text-xs mt-1.5 ml-2 font-medium absolute" />
-                  </div>
+                    <span className="text-3xl font-black tracking-tight group-hover:underline underline-offset-4">
+                      0934.997.265
+                    </span>
+                  </a>
+                  <p className="text-xs text-emerald-600 font-medium mt-2">
+                    Phản hồi ngay trong 30 giây · Miễn phí 100%
+                  </p>
                 </div>
 
-
-                {/* Message Textarea */}
-                <div className="rounded-2xl bg-gray-50/50 border border-gray-200 px-5 py-4 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200 mt-3">
-                  <label htmlFor="message" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Yêu Cầu Chi Tiết (Tùy chọn)</label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    rows={3}
-                    className="w-full bg-transparent border-none p-0 text-[16px] md:text-sm font-semibold text-gray-900 focus:ring-0 resize-none placeholder:text-gray-300 placeholder:font-medium leading-relaxed"
-                    placeholder="Ghi chú thêm về hiện trạng hoặc thời gian mong muốn khảo sát..." 
-                  ></textarea>
+                {/* ── Divider ── */}
+                <div className="flex items-center gap-4 mb-5">
+                  <hr className="flex-1 border-gray-200" />
+                  <span className="text-gray-400 text-sm font-medium px-1">hoặc để lại số, chúng tôi gọi lại</span>
+                  <hr className="flex-1 border-gray-200" />
                 </div>
+
+                {/* ── SECONDARY: Form ── */}
+                <form onSubmit={handleSubmit} className="space-y-4">
+
+                <div className="mb-6">
+                  <h3 className="text-[26px] font-extrabold text-gray-900 mb-1.5 tracking-tight">Để lại số điện thoại</h3>
+                  <p className="text-gray-500 text-[14px]">Chúng tôi gọi lại trong vòng 30 giây. Miễn phí tư vấn.</p>
+                </div>
+
+                {/* Phone — the only required field */}
+                <div className="relative group">
+                  <div className="rounded-2xl bg-gray-50/50 border-2 border-gray-200 px-5 py-4 focus-within:bg-white focus-within:border-[#2D8B3A] focus-within:ring-4 focus-within:ring-[#2D8B3A]/10 transition-all duration-200">
+                    <label htmlFor="phone" className="block text-[11px] font-bold text-emerald-600 uppercase tracking-widest mb-1.5">
+                      Số Điện Thoại <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      inputMode="numeric"
+                      className="w-full bg-transparent border-none p-0 text-2xl font-bold text-gray-900 focus:ring-0 placeholder:text-gray-300 placeholder:font-normal tracking-wide"
+                      placeholder="0934 xxx xxx"
+                      onChange={onPhoneChange}
+                    />
+                  </div>
+                  {phoneWarning && (
+                    <p className="text-amber-500 text-xs mt-1.5 ml-2 font-medium">{phoneWarning}</p>
+                  )}
+                  <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-500 text-xs mt-1.5 ml-2 font-medium" />
+                </div>
+
 
                 {state.errors && state.errors.getFormErrors().length > 0 && (
                   <div className="bg-red-50 text-red-600 p-4 rounded-2xl text-sm border border-red-100 flex items-start gap-3 mt-4">
@@ -213,8 +212,10 @@ export function Contact() {
                 <p className="text-[12px] text-center text-gray-400 font-medium mt-2">
                   Dữ liệu được xử lý an toàn theo <a href="/chinh-sach-bao-mat" className="underline underline-offset-2 hover:text-[#2D8B3A] transition-colors">chính sách bảo mật</a>.
                 </p>
-              </form>
+                </form>
+              </>
             )}
+
           </div>
         </div>
       </div>

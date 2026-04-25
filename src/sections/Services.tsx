@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Building2, Factory, HardHat, Home, CalendarCheck, ChevronRight } from 'lucide-react'
+import { Building2, Factory, HardHat, Home, CalendarCheck, ChevronRight, Phone } from 'lucide-react'
 import Link from 'next/link'
 import { PhoneLink, SectionTitle } from '@/components/ui'
 import Image from 'next/image'
@@ -128,13 +128,23 @@ export function Services() {
                   {service.description}
                 </p>
 
-                <Link
-                  href={`/${service.slug}`}
-                  className="inline-flex items-center gap-2 text-[#2D8B3A] font-bold text-sm hover:gap-4 transition-all duration-300 mt-auto bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-xl w-fit"
-                >
-                  Xem chi tiết & báo giá
-                  <ChevronRight size={16} />
-                </Link>
+                {/* Action row: phone CTA + detail link */}
+                <div className="flex items-center gap-2 mt-auto">
+                  <PhoneLink
+                    href="tel:+84934997265"
+                    className="flex-1 flex items-center justify-center gap-2 bg-[#2D8B3A] hover:bg-[#1E6B2A] text-white font-bold text-sm py-2.5 rounded-xl transition-colors shadow-sm shadow-emerald-700/20 active:scale-95"
+                  >
+                    <Phone size={14} className="fill-white" />
+                    Gọi Tư Vấn
+                  </PhoneLink>
+                  <Link
+                    href={`/${service.slug}`}
+                    className="flex items-center gap-1 text-[#2D8B3A] text-sm font-semibold px-3 py-2.5 rounded-xl hover:bg-emerald-50 transition-colors whitespace-nowrap"
+                  >
+                    Chi tiết
+                    <ChevronRight size={14} />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}

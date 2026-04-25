@@ -41,33 +41,57 @@ export function Hero() {
             <strong className="text-emerald-800 font-semibold">Nhà Xanh — &quot;Sạch Chuẩn, Nhanh Gọn, An Tâm&quot;</strong>. Lựa chọn hàng đầu cho văn phòng, nhà xưởng và căn hộ tại Đà Nẵng.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-8 lg:mb-10">
-            <Button 
-              href="tel:+84934997265" 
-              onClick={() => { submitPhoneLead(); trackPhoneClick('tel:+84934997265') }}
-              size="lg" 
-              className="h-14 px-8 text-base shadow-xl shadow-emerald-500/30 hover:shadow-emerald-500/40 transition-all hover:-translate-y-1 rounded-2xl relative overflow-hidden group"
-            >
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-all duration-1000 ease-out"></div>
-              <Phone size={20} className="mr-2" />
-              Tư vấn ngay trong 30s
-            </Button>
-            <Button 
-              href="#lien-he" 
-              variant="outline" 
-              size="lg" 
-              className="h-14 px-8 text-base border-2 border-emerald-100 bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 rounded-2xl transition-all hover:-translate-y-1"
-            >
-              Để lại SĐT gọi lại
-              <ArrowRight size={20} className="ml-2" />
-            </Button>
+          {/* Scarcity urgency pill — limited slot signal before CTA */}
+          <div className="flex items-center gap-2 mb-3 animate-[fadeInUp_0.4s_ease-out_0.3s_both]">
+            <span className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 text-[12px] font-bold px-3 py-1 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shrink-0" />
+              🔥 Còn 3 lịch khảo sát hôm nay — Đặt ngay trước khi hết
+            </span>
           </div>
 
-          {/* Social Proof & Features */}
-          <div className="grid grid-cols-2 gap-4 border-t border-gray-200 pt-8 mt-4">
+          {/* CTA Buttons */}
+
+          <div className="flex flex-col sm:flex-row gap-3 mb-4 lg:mb-5">
+            {/* Primary: Phone call — larger, pulsing ring, shows number */}
+            <div className="relative">
+              <span className="absolute -inset-1.5 rounded-[1.6rem] bg-emerald-500/25 animate-ping pointer-events-none" />
+              <Button
+                href="tel:+84934997265"
+                onClick={() => { submitPhoneLead(); trackPhoneClick('tel:+84934997265') }}
+                size="lg"
+                className="h-16 px-8 text-base font-black shadow-2xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transition-all hover:-translate-y-1 rounded-2xl relative overflow-hidden group whitespace-nowrap"
+              >
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-all duration-1000 ease-out" />
+                <Phone size={20} className="mr-2 fill-white shrink-0" />
+                Gọi: 0934.997.265
+              </Button>
+            </div>
+
+            {/* Secondary: form scroll — lighter weight */}
+            <a
+              href="#lien-he"
+              className="inline-flex items-center justify-center gap-2 h-16 px-6 text-emerald-700 font-semibold hover:text-emerald-900 transition-colors text-sm rounded-2xl hover:bg-emerald-50"
+            >
+              Để lại SĐT gọi lại
+              <ArrowRight size={18} />
+            </a>
+          </div>
+
+          {/* Social proof micro-copy — right under CTAs */}
+          <p className="text-[13px] text-gray-500 mb-8 lg:mb-10 flex items-center gap-1.5 animate-[fadeInUp_0.5s_ease-out_0.5s_both]">
+            <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
+            <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
+            <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
+            <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
+            <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
+            <span className="ml-0.5"><strong className="text-gray-700">4.9/5</strong> · 500+ khách hàng · Phản hồi trong 30 giây</span>
+          </p>
+
+          {/* Feature highlights */}
+          <div className="grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
             {highlights.map((text, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="flex items-start gap-3 animate-[fadeInUp_0.5s_ease-out_both]"
                 style={{ animationDelay: `${0.4 + i * 0.1}s` }}
               >
@@ -79,9 +103,9 @@ export function Hero() {
             ))}
             <div className="flex items-start gap-3 animate-[fadeInUp_0.5s_ease-out_0.7s_both]">
               <div className="bg-amber-100 p-1.5 rounded-full text-amber-600 mt-0.5">
-                <Star size={14} className="stroke-[3] fill-amber-500" />
+                <CheckCircle2 size={14} className="stroke-[3]" />
               </div>
-              <span className="text-sm font-medium text-gray-700 leading-tight">Được đánh giá 5/5 sao</span>
+              <span className="text-sm font-medium text-gray-700 leading-tight">100% hài lòng mới thanh toán</span>
             </div>
           </div>
         </div>

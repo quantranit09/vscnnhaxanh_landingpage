@@ -60,17 +60,17 @@ export function FloatingCTA() {
           <div className="absolute inset-[-6px] bg-[#2D8B3A]/20 rounded-full animate-ping opacity-40"></div>
           <PhoneLink
             href="tel:+84934997265"
-            className="h-[56px] flex items-center bg-[#2D8B3A] border-2 border-white text-white rounded-full 
+            className="h-[56px] flex items-center bg-[#2D8B3A] border-2 border-white text-white rounded-full
                      shadow-2xl hover:bg-[#1E6B2A] transition-colors relative z-10 px-5 group overflow-hidden"
             aria-label="Gọi ngay"
           >
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-all duration-1000 ease-out"></div>
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-all duration-1000 ease-out" />
             <div className="bg-white/20 p-2 rounded-full mr-2 shrink-0">
               <Phone className="fill-white w-5 h-5" />
             </div>
             <div className="flex flex-col justify-center text-left py-1 ml-1 pr-1">
-              <span className="font-extrabold text-[15px] uppercase tracking-wide leading-tight">Gọi miễn phí</span>
-              <span className="font-semibold text-[13px] text-white/90 leading-tight mt-0.5">Tư vấn ngay trong 30s</span>
+              <span className="font-black text-[15px] tracking-wide leading-tight">0934.997.265</span>
+              <span className="font-semibold text-[12px] text-white/90 leading-tight mt-0.5">Tư vấn miễn phí • Phản hồi 30s</span>
             </div>
           </PhoneLink>
         </div>
@@ -88,29 +88,36 @@ export function FloatingCTA() {
         <ChevronUp size={20} strokeWidth={2.5} />
       </button>
 
+      {/* ─── MOBILE: “Hiện đang hoạt động” status pill ─── */}
+      <div className="md:hidden fixed bottom-[76px] left-3 z-[51] flex items-center gap-1.5 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg">
+        <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+        ĐANG PHỤC VỤ
+      </div>
+
       {/* ─── MOBILE: Fixed Footer Full Width ─── */}
-      <div 
+      <div
         className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-100 p-3 flex gap-3 shadow-[0_-10px_40px_rgba(0,0,0,0.1)]"
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
-        <PhoneLink 
+        <PhoneLink
           href="tel:+84934997265"
           className="flex-1 relative overflow-hidden rounded-[18px] bg-gradient-to-l from-[#2D8B3A] to-[#45a352] text-white flex items-center justify-center shadow-lg shadow-[#2D8B3A]/40 active:scale-95 transition-transform"
         >
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.4)_50%,transparent_75%)] bg-[length:250%_250%] animate-[shimmer_2s_infinite]"></div>
-          <div className="bg-white/20 p-2 rounded-full mr-2.5 animate-[pulse_1.5s_infinite] shadow-sm">
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.4)_50%,transparent_75%)] bg-[length:250%_250%] animate-[shimmer_2s_infinite]" />
+          <div className="bg-white/20 p-2 rounded-full mr-2.5 shadow-sm shrink-0">
             <Phone size={18} className="fill-white" />
           </div>
           <div className="flex flex-col items-start leading-tight relative z-10">
-            <span className="font-extrabold text-[15px] uppercase tracking-wide drop-shadow-md">Gọi Ngay Để Tư Vấn</span>
-            <span className="font-semibold text-[12px] text-emerald-100 mt-0.5">Miễn phí 100%</span>
+            <span className="font-black text-[14px] tracking-wide drop-shadow-md">0934.997.265 — Gọi Ngay</span>
+            <span className="font-medium text-[11px] text-emerald-100 mt-0.5">Tư vấn miễn phí • Phản hồi 30s</span>
           </div>
         </PhoneLink>
-        <a 
+        <a
           href="https://zalo.me/0934997265"
           target="_blank"
           rel="noopener noreferrer"
           className="w-[52px] h-[52px] shrink-0 relative rounded-[18px] overflow-hidden shadow-md active:scale-95 transition-transform"
+          aria-label="Chat Zalo"
         >
           <Image src="/images/Logo-Zalo-Arc.webp" alt="Zalo" fill className="object-cover" />
         </a>

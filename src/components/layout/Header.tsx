@@ -17,7 +17,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
       <div className="container py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
@@ -53,23 +53,36 @@ export function Header() {
 
         {/* Desktop Hotline */}
         <div className="hidden md:flex items-center">
-          <PhoneLink
-            href="tel:+84934997265"
-            className="flex items-center gap-2 bg-[#2D8B3A] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#1E6B2A] transition-colors shadow-md text-sm"
-          >
-            <Phone size={16} />
-            <span>0934.997.265</span>
-          </PhoneLink>
+          {/* Pulsing ring for visual urgency */}
+          <div className="relative">
+            <span className="absolute -inset-1 rounded-xl bg-emerald-500/20 animate-ping pointer-events-none" />
+            <PhoneLink
+              href="tel:+84934997265"
+              className="relative flex items-center gap-2 bg-[#2D8B3A] text-white px-5 py-3 rounded-xl font-bold hover:bg-[#1E6B2A] transition-colors shadow-lg shadow-emerald-700/30 text-sm"
+            >
+              <Phone size={16} className="fill-white" />
+              <span>Gọi: 0934.997.265</span>
+            </PhoneLink>
+          </div>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 text-gray-700 hover:text-[#2D8B3A] transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Đóng menu" : "Mở menu"}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: phone icon + hamburger */}
+        <div className="md:hidden flex items-center gap-1">
+          <PhoneLink
+            href="tel:+84934997265"
+            className="p-2 text-[#2D8B3A] hover:bg-emerald-50 rounded-lg transition-colors"
+            aria-label="Gọi ngay"
+          >
+            <Phone size={22} className="fill-[#2D8B3A]" />
+          </PhoneLink>
+          <button
+            className="p-2 text-gray-700 hover:text-[#2D8B3A] transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Đóng menu" : "Mở menu"}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile dropdown */}
