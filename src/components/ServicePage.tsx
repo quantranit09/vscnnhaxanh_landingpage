@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, CheckCircle2, ChevronRight, Star, ArrowRight, MapPin } from 'lucide-react'
+import { CheckCircle2, ChevronRight, Star, MapPin, ArrowRight } from 'lucide-react'
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { SERVICES, type ServiceData } from '@/data/services'
-import { trackPhoneClick } from '@/lib/gtag'
+import { ServiceCTAButtons } from '@/components/ServiceCTAButtons'
 
-// ─── ContactForm (inline, nhẹ hơn import toàn bộ Contact.tsx) ────────────────
+// ─── QuickCTA — Server-safe (no onClick) ─────────────────────────────────────
 function QuickCTA({ service }: { service: ServiceData }) {
   return (
     <section
@@ -24,23 +24,8 @@ function QuickCTA({ service }: { service: ServiceData }) {
           Gọi hotline hoặc để lại số điện thoại — chuyên viên Nhà Xanh sẽ phản hồi trong 30 phút.
           Khảo sát thực tế và tư vấn hoàn toàn miễn phí.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="tel:+84934997265"
-            onClick={() => trackPhoneClick('tel:+84934997265')}
-            className="flex items-center gap-2 bg-white text-[#2D8B3A] px-8 py-4 rounded-2xl font-bold text-lg hover:bg-[#F5F7F5] transition-colors shadow-lg w-full sm:w-auto justify-center"
-          >
-            <Phone size={22} />
-            Gọi: 0934.997.265
-          </a>
-          <a
-            href="/#lien-he"
-            className="flex items-center gap-2 border-2 border-white/50 text-white px-8 py-4 rounded-2xl font-semibold hover:border-white transition-colors w-full sm:w-auto justify-center"
-          >
-            Để lại SĐT gọi lại
-            <ArrowRight size={18} />
-          </a>
-        </div>
+        {/* Client component handles onClick tracking */}
+        <ServiceCTAButtons phone="tel:+84934997265" />
         <p className="text-white/60 text-sm mt-6 flex items-center justify-center gap-1.5">
           <Star className="fill-amber-400 text-amber-400" size={14} />
           4.9/5 từ 100+ khách hàng tại Đà Nẵng
@@ -135,21 +120,8 @@ export function ServicePage({ service }: { service: ServiceData }) {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
-              <a
-                href="tel:+84934997265"
-                onClick={() => trackPhoneClick('tel:+84934997265')}
-                className="flex items-center justify-center gap-2 bg-[#2D8B3A] text-white px-6 py-4 rounded-2xl font-bold text-base shadow-xl shadow-emerald-500/30 hover:bg-[#1E6B2A] hover:-translate-y-0.5 transition-all"
-              >
-                <Phone size={20} />
-                Tư vấn ngay trong 30s
-              </a>
-              <a
-                href="#lien-he"
-                className="flex items-center justify-center gap-2 border-2 border-emerald-200 text-emerald-700 px-6 py-4 rounded-2xl font-semibold hover:bg-emerald-50 hover:-translate-y-0.5 transition-all"
-              >
-                Nhận báo giá miễn phí
-                <ChevronRight size={18} />
-              </a>
+              {/* Client component handles onClick tracking */}
+              <ServiceCTAButtons phone="tel:+84934997265" variant="hero" />
             </div>
 
             {/* Quick benefits */}

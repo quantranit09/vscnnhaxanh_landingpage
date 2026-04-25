@@ -7,10 +7,10 @@ import Link from "next/link";
 import { PhoneLink } from "@/components/ui";
 
 const navLinks = [
-  { name: "Dịch vụ", href: "#dich-vu" },
-  { name: "Bảng giá", href: "#bang-gia" },
-  { name: "Đánh giá", href: "#danh-gia" },
-  { name: "Liên hệ", href: "#lien-he" },
+  { name: "Dịch vụ", href: "/#dich-vu" },
+  { name: "Bảng giá", href: "/#bang-gia" },
+  { name: "Đánh giá", href: "/#danh-gia" },
+  { name: "Liên hệ", href: "/#lien-he" },
 ];
 
 export function Header() {
