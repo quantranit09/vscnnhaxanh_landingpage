@@ -1,5 +1,5 @@
-// Schema.org structured data — helps Google understand the business context,
-// show rich results (stars, address, FAQ) in SERPs, and improve local ranking.
+// LocalBusiness schema — load trên mọi trang (đặt trong root layout)
+// FAQPage đã được tách ra HomeJsonLd (chỉ homepage) và ServiceSchema (chỉ service pages)
 export function JsonLd() {
   const localBusiness = {
     '@context': 'https://schema.org',
@@ -75,51 +75,26 @@ export function JsonLd() {
       '@type': 'OfferCatalog',
       name: 'Dịch Vụ Vệ Sinh Công Nghiệp',
       itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Vệ sinh văn phòng & tòa nhà',
-            description: 'Vệ sinh toàn bộ văn phòng, tòa nhà, tầng hầm. Lau kính, cọ rửa sàn, khử trùng bề mặt. Phục vụ theo ca hoặc định kỳ.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Vệ sinh nhà xưởng & kho bãi',
-            description: 'Xử lý dầu mỡ, bụi công nghiệp, chất thải sản xuất. Thiết bị chuyên dụng cho sàn epoxy và máy móc.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Vệ sinh sau xây dựng',
-            description: 'Dọn sạch bụi xi măng, sơn, keo silicon sau công trình. Đánh bóng sàn đá. Bàn giao trong 24 giờ.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Dọn dẹp nhà cửa & căn hộ',
-            description: 'Vệ sinh toàn bộ không gian sống bằng hóa chất xanh an toàn. Phục vụ tại nhà theo giờ.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Dọn dẹp định kỳ',
-            description: 'Hợp đồng định kỳ theo tuần hoặc tháng. Tiết kiệm 20%, nhân viên cố định, xuất hóa đơn VAT.',
-          },
-        },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vệ sinh văn phòng & tòa nhà' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vệ sinh nhà xưởng & kho bãi' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vệ sinh sau xây dựng' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dọn dẹp nhà cửa & căn hộ' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dọn dẹp định kỳ' } },
       ],
     },
   }
 
-  // FAQ schema — triggers "People Also Ask" rich results in Google
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
+    />
+  )
+}
+
+// FAQPage schema — chỉ dùng trên homepage (src/app/page.tsx)
+// KHÔNG đặt trong layout để tránh duplicate với FAQPage của service pages
+export function HomeFaqJsonLd() {
   const faqPage = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -176,15 +151,9 @@ export function JsonLd() {
   }
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }}
+    />
   )
 }
