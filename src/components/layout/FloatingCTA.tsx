@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { Phone, ChevronUp } from 'lucide-react'
 import Image from 'next/image'
 import { PhoneLink } from '@/components/ui'
+import { trackZaloClick } from '@/lib/gtag'
 
 export function FloatingCTA() {
   const [showTop, setShowTop] = useState(false)
@@ -38,6 +39,7 @@ export function FloatingCTA() {
           href="https://zalo.me/0934997265"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackZaloClick}
           className="pointer-events-auto self-end h-[56px] w-[56px] rounded-full 
                    shadow-xl flex items-center justify-center hover:scale-105
                    transition-transform relative group overflow-hidden"
@@ -116,6 +118,7 @@ export function FloatingCTA() {
           href="https://zalo.me/0934997265"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackZaloClick}
           className="w-[52px] h-[52px] shrink-0 relative rounded-[18px] overflow-hidden shadow-md active:scale-95 transition-transform"
           aria-label="Chat Zalo"
         >

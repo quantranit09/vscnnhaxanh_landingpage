@@ -2,6 +2,7 @@
 // Conversion ID  : AW-11498445959
 // Phone Click    : AW-11498445959/gROpCJTu5pccEIe58eoq        ✅
 // Form Submit    : AW-11498445959/8iHXCIDNlpYcEIe58eoq         ✅
+// Zalo Click     : reuse PHONE_CLICK label (liên hệ trực tiếp) ✅
 // ──────────────────────────────────────────────────────────────────────────────
 
 declare global {
@@ -16,6 +17,10 @@ const GOOGLE_ADS_ID = "AW-11498445959";
 export const CONVERSION = {
   PHONE_CLICK: `${GOOGLE_ADS_ID}/gROpCJTu5pccEIe58eoq`,
   FORM_SUBMIT: `${GOOGLE_ADS_ID}/8iHXCIDNlpYcEIe58eoq`,
+  // Zalo click = liên hệ trực tiếp → reuse PHONE_CLICK label.
+  // Nếu muốn tách riêng: tạo conversion action mới trong Google Ads
+  // rồi paste label vào đây.
+  ZALO_CLICK: `${GOOGLE_ADS_ID}/gROpCJTu5pccEIe58eoq`,
 } as const;
 
 export function fireConversion(sendTo: string) {
@@ -81,4 +86,15 @@ export function trackPhoneClick(url?: string) {
 /** Fire khi Formspree xác nhận form submit thành công — fire cả 2 actions */
 export function trackFormSubmit() {
   fireConversion(CONVERSION.FORM_SUBMIT);
+}
+
+/** Fire khi user click nút Zalo (mở chat Zalo) */
+export function trackZaloClick() {
+  if (typeof window === "undefined" || typeof window.gtag !== "function")
+    return;
+  window.gtag("event", "conversion", {
+    send_to: CONVERSION.ZALO_CLICK,
+    value: 1.0,
+    currency: "VND",
+  });
 }
