@@ -61,25 +61,33 @@ export function submitPhoneLead(phoneNumber = "0934.997.265") {
 export function trackPhoneClick(url?: string) {
   if (typeof window === "undefined") return false;
 
-  const callback = () => {
+  let navigated = false;
+  const navigate = () => {
+    if (navigated) return;
+    navigated = true;
     if (typeof url !== "undefined") {
       window.location.href = url;
     }
   };
 
   if (typeof window.gtag !== "function") {
-    callback();
+    navigate();
     return false;
   }
+
+  // Fallback: if Google doesn't fire event_callback within 1s, navigate anyway
+  const fallback = window.setTimeout(navigate, 1000);
 
   window.gtag("event", "conversion", {
     send_to: CONVERSION.PHONE_CLICK,
     value: 1.0,
     currency: "VND",
-    event_callback: callback,
+    event_callback: () => {
+      window.clearTimeout(fallback);
+      navigate();
+    },
   });
 
-  window.setTimeout(callback, 1000);
   return false;
 }
 
