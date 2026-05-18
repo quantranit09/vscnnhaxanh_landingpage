@@ -56,14 +56,14 @@ export function Hero() {
             <div className="relative">
               <span className="absolute -inset-1.5 rounded-[1.6rem] bg-emerald-500/25 animate-ping pointer-events-none" />
               <Button
-                href="tel:+84934997265"
-                onClick={() => { submitPhoneLead(); trackPhoneClick('tel:+84934997265') }}
+                href="tel:+84935426117"
+                onClick={() => { submitPhoneLead(); trackPhoneClick('tel:+84935426117') }}
                 size="lg"
                 className="h-16 px-8 text-base font-black shadow-2xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transition-all hover:-translate-y-1 rounded-2xl relative overflow-hidden group whitespace-nowrap"
               >
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-all duration-1000 ease-out" />
                 <Phone size={20} className="mr-2 fill-white shrink-0" />
-                Gọi: 0934.997.265
+                Gọi: 0935.426.117
               </Button>
             </div>
 

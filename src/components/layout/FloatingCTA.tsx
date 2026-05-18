@@ -74,7 +74,7 @@ export function FloatingCTA() {
             style={{ willChange: 'transform, opacity' }}
           />
           <PhoneLink
-            href="tel:+84934997265"
+            href="tel:+84935426117"
             className="h-[56px] flex items-center bg-[#2D8B3A] border-2 border-white text-white rounded-full
                      shadow-2xl hover:bg-[#1E6B2A] transition-colors relative z-10 px-5 group overflow-hidden"
             aria-label="Gọi ngay"
@@ -84,7 +84,7 @@ export function FloatingCTA() {
               <Phone className="fill-white w-5 h-5" />
             </div>
             <div className="flex flex-col justify-center text-left py-1 ml-1 pr-1">
-              <span className="font-black text-[15px] tracking-wide leading-tight">0934.997.265</span>
+              <span className="font-black text-[15px] tracking-wide leading-tight">0935.426.117</span>
               <span className="font-semibold text-[12px] text-white/90 leading-tight mt-0.5">Tư vấn miễn phí • Phản hồi 30s</span>
             </div>
           </PhoneLink>
@@ -115,7 +115,7 @@ export function FloatingCTA() {
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
         <PhoneLink
-          href="tel:+84934997265"
+          href="tel:+84935426117"
           className="flex-1 relative overflow-hidden rounded-[18px] bg-gradient-to-l from-[#2D8B3A] to-[#45a352] text-white flex items-center justify-center shadow-lg shadow-[#2D8B3A]/40 active:scale-95 transition-transform"
         >
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.4)_50%,transparent_75%)] bg-[length:250%_250%] animate-[shimmer_2s_infinite]" />
@@ -123,7 +123,7 @@ export function FloatingCTA() {
             <Phone size={18} className="fill-white" />
           </div>
           <div className="flex flex-col items-start leading-tight relative z-10">
-            <span className="font-black text-[14px] tracking-wide drop-shadow-md">0934.997.265 — Gọi Ngay</span>
+            <span className="font-black text-[14px] tracking-wide drop-shadow-md">0935.426.117 — Gọi Ngay</span>
             <span className="font-medium text-[11px] text-emerald-100 mt-0.5">Tư vấn miễn phí • Phản hồi 30s</span>
           </div>
         </PhoneLink>

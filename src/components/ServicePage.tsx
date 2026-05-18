@@ -25,7 +25,7 @@ function QuickCTA({ service }: { service: ServiceData }) {
           Khảo sát thực tế và tư vấn hoàn toàn miễn phí.
         </p>
         {/* Client component handles onClick tracking */}
-        <ServiceCTAButtons phone="tel:+84934997265" />
+        <ServiceCTAButtons phone="tel:+84935426117" />
         <p className="text-white/60 text-sm mt-6 flex items-center justify-center gap-1.5">
           <Star className="fill-amber-400 text-amber-400" size={14} />
           4.9/5 từ 100+ khách hàng tại Đà Nẵng
@@ -47,7 +47,7 @@ function ServiceSchema({ service }: { service: ServiceData }) {
       '@type': 'LocalBusiness',
       '@id': 'https://vscnnhaxanhdanang.com/#business',
       name: 'Nhà Xanh – Vệ Sinh Công Nghiệp Đà Nẵng',
-      telephone: '+84934997265',
+      telephone: '+84935426117',
     },
     areaServed: { '@type': 'City', name: 'Đà Nẵng' },
     offers: {
@@ -121,7 +121,7 @@ export function ServicePage({ service }: { service: ServiceData }) {
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               {/* Client component handles onClick tracking */}
-              <ServiceCTAButtons phone="tel:+84934997265" variant="hero" />
+              <ServiceCTAButtons phone="tel:+84935426117" variant="hero" />
             </div>
 
             {/* Quick benefits */}

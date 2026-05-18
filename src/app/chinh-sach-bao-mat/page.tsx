@@ -70,8 +70,8 @@ export default function ChinhSachBaoMatPage() {
           <ul className="space-y-2">
             <li>
               📞 Hotline:{' '}
-              <PhoneLink href="tel:+84934997265" className="text-[#2D8B3A] hover:underline font-medium">
-                0934.997.265
+              <PhoneLink href="tel:+84935426117" className="text-[#2D8B3A] hover:underline font-medium">
+                0935.426.117
               </PhoneLink>
             </li>
             <li>

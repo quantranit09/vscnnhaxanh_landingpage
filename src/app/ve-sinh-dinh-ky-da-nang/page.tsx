@@ -8,7 +8,7 @@ const SERVICE_SLUG = 've-sinh-dinh-ky-da-nang'
 export const metadata: Metadata = {
   title: 'Vệ Sinh Định Kỳ Đà Nẵng | Nhà Xanh – Tiết Kiệm 20%',
   description:
-    'Dịch vụ vệ sinh định kỳ theo tuần, tháng tại Đà Nẵng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20% so với đặt lẻ. Xuất hóa đơn VAT. Hotline: 0934.997.265',
+    'Dịch vụ vệ sinh định kỳ theo tuần, tháng tại Đà Nẵng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20% so với đặt lẻ. Xuất hóa đơn VAT. Hotline: 0935.426.117',
   alternates: {
     canonical: `https://vscnnhaxanhdanang.com/${SERVICE_SLUG}`,
   },

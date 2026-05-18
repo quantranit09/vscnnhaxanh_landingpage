@@ -57,11 +57,11 @@ export function Header() {
           <div className="relative">
             <span className="absolute -inset-1 rounded-xl bg-emerald-500/20 animate-ping pointer-events-none" />
             <PhoneLink
-              href="tel:+84934997265"
+              href="tel:+84935426117"
               className="relative flex items-center gap-2 bg-[#2D8B3A] text-white px-5 py-3 rounded-xl font-bold hover:bg-[#1E6B2A] transition-colors shadow-lg shadow-emerald-700/30 text-sm"
             >
               <Phone size={16} className="fill-white" />
-              <span>Gọi: 0934.997.265</span>
+              <span>Gọi: 0935.426.117</span>
             </PhoneLink>
           </div>
         </div>
@@ -69,7 +69,7 @@ export function Header() {
         {/* Mobile: phone icon + hamburger */}
         <div className="md:hidden flex items-center gap-1">
           <PhoneLink
-            href="tel:+84934997265"
+            href="tel:+84935426117"
             className="p-2 text-[#2D8B3A] hover:bg-emerald-50 rounded-lg transition-colors"
             aria-label="Gọi ngay"
           >
@@ -99,11 +99,11 @@ export function Header() {
             </a>
           ))}
           <PhoneLink
-            href="tel:+84934997265"
+            href="tel:+84935426117"
             className="flex items-center justify-center gap-2 bg-[#2D8B3A] text-white px-6 py-3.5 rounded-lg font-bold text-base mt-2"
           >
             <Phone size={20} />
-            Gọi Ngay: 0934.997.265
+            Gọi Ngay: 0935.426.117
           </PhoneLink>
         </div>
       )}

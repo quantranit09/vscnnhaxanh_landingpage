@@ -39,7 +39,7 @@ const FORMSPREE_ID = "xbdpyjdg";
  * Silently submit a Formspree lead when user clicks a phone link.
  * Fires-and-forgets — does NOT block navigation.
  */
-export function submitPhoneLead(phoneNumber = "0934.997.265") {
+export function submitPhoneLead(phoneNumber = "0935.426.117") {
   if (typeof window === "undefined") return;
   const data = new FormData();
   data.append("name", "Gọi điện trực tiếp");

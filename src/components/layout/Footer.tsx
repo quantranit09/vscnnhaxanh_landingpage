@@ -64,8 +64,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/75 text-sm">
                 <Phone size={16} className="shrink-0 text-[#5AB645]" />
-                <PhoneLink href="tel:+84934997265" className="hover:text-white font-medium transition-colors">
-                  0934.997.265
+                <PhoneLink href="tel:+84935426117" className="hover:text-white font-medium transition-colors">
+                  0935.426.117
                 </PhoneLink>
               </li>
               <li className="flex items-center gap-3 text-white/75 text-sm">
@@ -96,7 +96,7 @@ export function Footer() {
       <div className="border-t border-white/15 pt-5 pb-24 md:pb-5">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-3 text-white/50 text-xs text-center md:text-left">
           <p>© 2025 Công ty TNHH TM XD DV Nhà Xanh. All rights reserved.</p>
-          <p>Thiết kế bởi <a href="https://zalo.me/0935426117" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors underline underline-offset-2">Trần Cảnh Quân</a></p>
+          <p>Thiết kế bởi <a href="https://zalo.me/0934997265" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors underline underline-offset-2">Trần Cảnh Quân</a></p>
           <a href="/chinh-sach-bao-mat" className="hover:text-white/80 transition-colors underline underline-offset-2">
             Chính sách bảo mật
           </a>
