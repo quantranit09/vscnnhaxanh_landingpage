@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Nhà Xanh – Vệ Sinh Đà Nẵng",
   },
   description:
-    "Dịch vụ vệ sinh công nghiệp Đà Nẵng uy tín: văn phòng, nhà xưởng, sau xây dựng, căn hộ, định kỳ. Hóa chất xanh chuẩn Châu Âu. Báo giá trong 30 phút – 100% hài lòng mới thanh toán. Hotline: 0935.426.117",
+    "Dịch vụ vệ sinh công nghiệp Đà Nẵng uy tín: văn phòng, nhà xưởng, sau xây dựng, căn hộ, định kỳ. Hóa chất xanh chuẩn Châu Âu. Báo giá trong 30 phút – 100% hài lòng mới thanh toán. Hotline: 0934.997.265",
   keywords: [
     "vệ sinh công nghiệp đà nẵng",
     "dịch vụ vệ sinh văn phòng đà nẵng",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vệ Sinh Công Nghiệp Đà Nẵng | Nhà Xanh",
     description:
-      "Vệ sinh văn phòng, nhà xưởng, sau xây dựng tại Đà Nẵng. Báo giá 30 phút. Hotline: 0935.426.117",
+      "Vệ sinh văn phòng, nhà xưởng, sau xây dựng tại Đà Nẵng. Báo giá 30 phút. Hotline: 0934.997.265",
     images: ["/og-image.jpg"],
   },
   robots: {

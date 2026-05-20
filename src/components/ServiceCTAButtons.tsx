@@ -47,7 +47,7 @@ export function ServiceCTAButtons({
         className="flex items-center gap-2 bg-white text-[#2D8B3A] px-8 py-4 rounded-2xl font-bold text-lg hover:bg-[#F5F7F5] transition-colors shadow-lg w-full sm:w-auto justify-center"
       >
         <Phone size={22} />
-        Gọi: 0935.426.117
+        Gọi: 0934.997.265
       </a>
       <Link
         href="/#lien-he"

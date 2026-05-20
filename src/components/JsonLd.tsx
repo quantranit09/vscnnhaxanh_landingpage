@@ -10,7 +10,7 @@ export function JsonLd() {
     description:
       'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh chuẩn Châu Âu, an toàn cho trẻ em và vật nuôi.',
     url: 'https://vscnnhaxanhdanang.com',
-    telephone: '+84935426117',
+    telephone: '+84934997265',
     email: 'canhquan.work@gmail.com',
     foundingDate: '2019',
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 30 },

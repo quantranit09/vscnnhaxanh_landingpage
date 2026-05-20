@@ -31,7 +31,7 @@ export const SERVICES: ServiceData[] = [
     heroKeyword: 'Vệ Sinh Văn Phòng Đà Nẵng',
     metaTitle: 'Vệ Sinh Văn Phòng Đà Nẵng | Nhà Xanh – Từ 12,000đ/m²',
     metaDescription:
-      'Dịch vụ vệ sinh văn phòng chuyên nghiệp tại Đà Nẵng: lau kính, cọ sàn, khử trùng bề mặt, giặt thảm. Phục vụ theo ca hoặc định kỳ. Báo giá trong 30 phút. Hotline: 0935.426.117',
+      'Dịch vụ vệ sinh văn phòng chuyên nghiệp tại Đà Nẵng: lau kính, cọ sàn, khử trùng bề mặt, giặt thảm. Phục vụ theo ca hoặc định kỳ. Báo giá trong 30 phút. Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
     heroImage: '/images/service-office.webp',
     price: 'Từ 12,000đ',
@@ -120,7 +120,7 @@ export const SERVICES: ServiceData[] = [
     heroKeyword: 'Vệ Sinh Sau Xây Dựng Đà Nẵng',
     metaTitle: 'Vệ Sinh Sau Xây Dựng Đà Nẵng | Nhà Xanh – Từ 15,000đ/m²',
     metaDescription:
-      'Vệ sinh sau xây dựng, sau cải tạo tại Đà Nẵng: tẩy xi măng, sơn, keo silicon, đánh bóng sàn đá. Bàn giao trong 24h. Từ 15,000đ/m². Hotline: 0935.426.117',
+      'Vệ sinh sau xây dựng, sau cải tạo tại Đà Nẵng: tẩy xi măng, sơn, keo silicon, đánh bóng sàn đá. Bàn giao trong 24h. Từ 15,000đ/m². Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
     heroImage: '/images/service-post-construction.webp',
     price: 'Từ 15,000đ',
@@ -164,7 +164,7 @@ export const SERVICES: ServiceData[] = [
     heroKeyword: 'Dọn Dẹp Nhà Căn Hộ Đà Nẵng',
     metaTitle: 'Dọn Dẹp Nhà Căn Hộ Đà Nẵng | Nhà Xanh – Từ 1,200,000đ/gói',
     metaDescription:
-      'Dịch vụ dọn dẹp nhà cửa, căn hộ tại Đà Nẵng: bếp, phòng ngủ, phòng tắm. Hóa chất xanh an toàn cho trẻ em và vật nuôi. Phục vụ theo giờ tại nhà. Hotline: 0935.426.117',
+      'Dịch vụ dọn dẹp nhà cửa, căn hộ tại Đà Nẵng: bếp, phòng ngủ, phòng tắm. Hóa chất xanh an toàn cho trẻ em và vật nuôi. Phục vụ theo giờ tại nhà. Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
     heroImage: '/images/service-apartment.webp',
     price: 'Từ 1,200,000đ',
@@ -208,7 +208,7 @@ export const SERVICES: ServiceData[] = [
     heroKeyword: 'Vệ Sinh Định Kỳ Đà Nẵng',
     metaTitle: 'Vệ Sinh Định Kỳ Đà Nẵng | Nhà Xanh – Tiết Kiệm 20%',
     metaDescription:
-      'Dịch vụ vệ sinh định kỳ theo tuần, tháng tại Đà Nẵng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20% so với đặt lẻ. Xuất hóa đơn VAT. Hotline: 0935.426.117',
+      'Dịch vụ vệ sinh định kỳ theo tuần, tháng tại Đà Nẵng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20% so với đặt lẻ. Xuất hóa đơn VAT. Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
     heroImage: '/images/service-periodic-house.webp',
     price: 'Từ 12,000đ',

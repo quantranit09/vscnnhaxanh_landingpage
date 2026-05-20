@@ -34,11 +34,11 @@ export function AnnouncementBar() {
     <div className="relative bg-[#1a5c27] text-white text-[13px] py-2 px-4 flex items-center justify-center gap-3 min-h-[36px]">
       {/* Left: phone quick-access (desktop) */}
       <a
-        href="tel:+84935426117"
+        href="tel:+84934997265"
         className="hidden sm:flex items-center gap-1.5 text-emerald-200 hover:text-white transition-colors font-semibold shrink-0"
       >
         <Phone size={13} className="fill-emerald-200" />
-        0935.426.117
+        0934.997.265
       </a>
 
       {/* Divider */}
@@ -56,7 +56,7 @@ export function AnnouncementBar() {
       {/* Right: CTA pill (desktop) */}
       <span className="hidden sm:block w-px h-4 bg-white/20 shrink-0" />
       <a
-        href="tel:+84935426117"
+        href="tel:+84934997265"
         className="hidden sm:flex items-center gap-1 bg-amber-400 hover:bg-amber-300 text-amber-900 font-black text-[11px] uppercase tracking-wider px-3 py-1 rounded-full transition-colors shrink-0"
       >
         <Zap size={11} className="fill-amber-900" />

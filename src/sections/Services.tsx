@@ -131,7 +131,7 @@ export function Services() {
                 {/* Action row: phone CTA + detail link */}
                 <div className="flex items-center gap-2 mt-auto">
                   <PhoneLink
-                    href="tel:+84935426117"
+                    href="tel:+84934997265"
                     className="flex-1 flex items-center justify-center gap-2 bg-[#2D8B3A] hover:bg-[#1E6B2A] text-white font-bold text-sm py-2.5 rounded-xl transition-colors shadow-sm shadow-emerald-700/20 active:scale-95"
                   >
                     <Phone size={14} className="fill-white" />
@@ -171,7 +171,7 @@ export function Services() {
               <p className="text-[#4A5A4A] text-sm">Đội ngũ chuyên viên của chúng tôi luôn sẵn sàng hỗ trợ khảo sát và tư vấn giải pháp đo ni đóng giày cho bạn.</p>
             </div>
             <PhoneLink
-              href="tel:+84935426117"
+              href="tel:+84934997265"
               className="mt-4 sm:mt-0 shrink-0 inline-flex items-center gap-2 bg-[#2D8B3A] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1E6B2A] transition-colors shadow-md hover:shadow-lg w-full sm:w-auto justify-center"
             >
               Gọi Tư Vấn Ngay

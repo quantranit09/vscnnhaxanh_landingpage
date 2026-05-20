@@ -23,7 +23,7 @@ const contactInfo = [
     title: "Địa chỉ",
     detail: "32 Phú Lộc 14, Thanh Khê, Đà Nẵng",
   },
-  { icon: Phone, title: "Hotline & Zalo", detail: "0935.426.117" },
+  { icon: Phone, title: "Hotline & Zalo", detail: "0934.997.265" },
   { icon: Mail, title: "Email", detail: "canhquan.work@gmail.com" },
   { icon: Clock, title: "Giờ hoạt động", detail: "Phục vụ 24/7 (Cả Lễ, Tết)" },
 ];
@@ -164,11 +164,11 @@ export function Contact() {
                     Cách nhanh nhất
                   </p>
                   <a
-                    href="tel:+84935426117"
+                    href="tel:+84934997265"
                     onClick={(e) => {
                       e.preventDefault();
                       submitPhoneLead();
-                      trackPhoneClick("tel:+84935426117");
+                      trackPhoneClick("tel:+84934997265");
                     }}
                     className="group inline-flex items-center justify-center gap-3 text-[#2D8B3A] hover:text-[#1E6B2A] transition-colors"
                   >
@@ -180,7 +180,7 @@ export function Contact() {
                       />
                     </div>
                     <span className="text-3xl font-black tracking-tight group-hover:underline underline-offset-4">
-                      0935.426.117
+                      0934.997.265
                     </span>
                   </a>
                   <p className="text-xs text-emerald-600 font-medium mt-2">
