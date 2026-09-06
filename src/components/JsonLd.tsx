@@ -8,7 +8,7 @@ export function JsonLd() {
     name: 'Nhà Xanh – Vệ Sinh Công Nghiệp Đà Nẵng',
     alternateName: 'Công ty TNHH TM XD DV Nhà Xanh',
     description:
-      'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh chuẩn Châu Âu, an toàn cho trẻ em và vật nuôi.',
+      'Dịch vụ vệ sinh công nghiệp uy tín tại Đà Nẵng: văn phòng, nhà xưởng, sau xây dựng, nhà cửa, định kỳ. Hóa chất xanh an toàn cho gia đình và nơi làm việc.',
     url: 'https://vscnnhaxanhdanang.com',
     telephone: '+84934997265',
     email: 'canhquan.work@gmail.com',
@@ -65,10 +65,10 @@ export function JsonLd() {
     paymentAccepted: 'Tiền mặt, Chuyển khoản',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '100',
-      bestRating: '5',
-      worstRating: '1',
+      ratingValue: 4.9,
+      reviewCount: 100,
+      bestRating: 5,
+      worstRating: 1,
     },
     sameAs: ['https://www.facebook.com/vesinhcongnghiepnhaxanh'],
     hasOfferCatalog: {
@@ -112,7 +112,7 @@ export function HomeFaqJsonLd() {
         name: 'Hóa chất vệ sinh của Nhà Xanh có an toàn cho trẻ em không?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '100% hóa chất của Nhà Xanh đạt chuẩn Châu Âu, hoàn toàn an toàn cho trẻ em, vật nuôi và không gây kích ứng da. Không có mùi hắc hay độc hại.',
+          text: 'Nhà Xanh sử dụng hóa chất xanh, không mùi hắc, an toàn cho trẻ em và vật nuôi trong điều kiện sử dụng đúng hướng dẫn.',
         },
       },
       {
@@ -120,7 +120,7 @@ export function HomeFaqJsonLd() {
         name: 'Nhà Xanh phục vụ những khu vực nào tại Đà Nẵng?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Nhà Xanh phục vụ toàn bộ các quận tại Đà Nẵng: Hải Châu, Thanh Khê, Sơn Trà, Ngũ Hành Sơn, Liên Chiểu, Cẩm Lệ và Hòa Vang với đội xe 24/7.',
+          text: 'Nhà Xanh phục vụ toàn bộ các quận tại Đà Nẵng: Hải Châu, Thanh Khê, Sơn Trà, Ngũ Hành Sơn, Liên Chiểu, Cẩm Lệ và Hòa Vang.',
         },
       },
       {

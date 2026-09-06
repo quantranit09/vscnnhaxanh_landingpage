@@ -12,6 +12,10 @@
 
 # testing
 /coverage
+.seo-cache/
+.playwright-mcp/
+seo-home-*.png
+post-construction-calculator-*.png
 
 # next.js
 /.next/

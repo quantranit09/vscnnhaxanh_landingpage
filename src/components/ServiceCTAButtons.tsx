@@ -10,11 +10,17 @@ import Link from "next/link";
 interface ServiceCTAButtonsProps {
   phone: string;
   variant?: "hero" | "cta";
+  primaryLabel?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
 }
 
 export function ServiceCTAButtons({
   phone,
   variant = "cta",
+  primaryLabel,
+  secondaryLabel,
+  secondaryHref,
 }: ServiceCTAButtonsProps) {
   if (variant === "hero") {
     return (
@@ -25,13 +31,13 @@ export function ServiceCTAButtons({
           className="flex items-center justify-center gap-2 bg-[#2D8B3A] text-white px-6 py-4 rounded-2xl font-bold text-base shadow-xl shadow-emerald-500/30 hover:bg-[#1E6B2A] hover:-translate-y-0.5 transition-all"
         >
           <Phone size={20} />
-          Tư vấn ngay trong 30s
+          {primaryLabel ?? "Tư vấn trong 30 phút"}
         </a>
         <a
-          href="#lien-he"
+          href={secondaryHref ?? "#lien-he"}
           className="flex items-center justify-center gap-2 border-2 border-emerald-200 text-emerald-700 px-6 py-4 rounded-2xl font-semibold hover:bg-emerald-50 hover:-translate-y-0.5 transition-all"
         >
-          Nhận báo giá miễn phí
+          {secondaryLabel ?? "Nhận báo giá miễn phí"}
           <ChevronRight size={18} />
         </a>
       </>

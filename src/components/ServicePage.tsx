@@ -4,6 +4,7 @@ import { CheckCircle2, ChevronRight, Star, MapPin, ArrowRight } from 'lucide-rea
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { SERVICES, type ServiceData } from '@/data/services'
 import { ServiceCTAButtons } from '@/components/ServiceCTAButtons'
+import { PostConstructionCostCalculator } from '@/components/PostConstructionCostCalculator'
 
 // ─── QuickCTA — Server-safe (no onClick) ─────────────────────────────────────
 function QuickCTA({ service }: { service: ServiceData }) {
@@ -80,6 +81,8 @@ function ServiceSchema({ service }: { service: ServiceData }) {
 // ─── Main ServicePage component ───────────────────────────────────────────────
 export function ServicePage({ service }: { service: ServiceData }) {
   const otherServices = SERVICES.filter((s) => s.slug !== service.slug)
+  const isPostConstruction = service.slug === 've-sinh-sau-xay-dung-da-nang'
+  const phoneHref = isPostConstruction ? 'tel:0934997265' : 'tel:+84934997265'
 
   return (
     <>
@@ -114,14 +117,29 @@ export function ServicePage({ service }: { service: ServiceData }) {
             </h1>
 
             <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
-              <strong className="text-emerald-800">{service.tagline}</strong>
-              {' '}— {service.priceUnit !== '/gói' ? `${service.price}${service.priceUnit}` : service.price}{' '}
-              · Báo giá miễn phí trong 30 phút.
+              {isPostConstruction ? (
+                <>
+                  <strong className="text-emerald-800">Giá từ 15.000đ/m²</strong>
+                  {' '}· Khảo sát miễn phí · Báo giá trước khi thi công. Giá chính thức phụ thuộc diện tích và tình trạng thực tế.
+                </>
+              ) : (
+                <>
+                  <strong className="text-emerald-800">{service.tagline}</strong>
+                  {' '}— {service.priceUnit !== '/gói' ? `${service.price}${service.priceUnit}` : service.price}{' '}
+                  · Báo giá miễn phí trong 30 phút.
+                </>
+              )}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               {/* Client component handles onClick tracking */}
-              <ServiceCTAButtons phone="tel:+84934997265" variant="hero" />
+              <ServiceCTAButtons
+                phone={phoneHref}
+                variant="hero"
+                primaryLabel={isPostConstruction ? 'Gọi 0934 997 265' : undefined}
+                secondaryLabel={isPostConstruction ? 'Ước tính chi phí' : undefined}
+                secondaryHref={isPostConstruction ? '#uoc-tinh-chi-phi' : undefined}
+              />
             </div>
 
             {/* Quick benefits */}
@@ -156,6 +174,8 @@ export function ServicePage({ service }: { service: ServiceData }) {
           </div>
         </div>
       </section>
+
+      {isPostConstruction && <PostConstructionCostCalculator />}
 
       {/* ── BENEFITS ─────────────────────────────────────────────────────── */}
       <section aria-label="Phạm vi dịch vụ" className="py-16 bg-white">
@@ -301,7 +321,7 @@ export function ServicePage({ service }: { service: ServiceData }) {
           <h2 className="text-xl font-extrabold text-gray-900 mb-2">
             Khu Vực {service.shortName} Tại Đà Nẵng
           </h2>
-          <p className="text-gray-500 text-sm mb-6">Đội xe 24/7 — phủ sóng toàn thành phố</p>
+          <p className="text-gray-500 text-sm mb-6">Phủ sóng toàn thành phố — tư vấn và khảo sát theo lịch hẹn</p>
           <div className="flex flex-wrap justify-center gap-3">
             {['Hải Châu', 'Thanh Khê', 'Sơn Trà', 'Ngũ Hành Sơn', 'Liên Chiểu', 'Cẩm Lệ', 'Hòa Vang'].map(
               (district) => (

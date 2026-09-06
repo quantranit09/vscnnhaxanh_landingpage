@@ -6,7 +6,9 @@ import { ServicePage } from '@/components/ServicePage'
 const SERVICE_SLUG = 've-sinh-sau-xay-dung-da-nang'
 
 export const metadata: Metadata = {
-  title: 'Vệ Sinh Sau Xây Dựng Đà Nẵng | Nhà Xanh – Từ 15,000đ/m²',
+  title: {
+    absolute: 'Vệ Sinh Sau Xây Dựng Đà Nẵng | Nhà Xanh',
+  },
   description:
     'Vệ sinh sau xây dựng, sau cải tạo tại Đà Nẵng: tẩy xi măng, sơn, keo silicon, đánh bóng sàn đá. Bàn giao trong 24h. Từ 15,000đ/m². Hotline: 0934.997.265',
   alternates: {

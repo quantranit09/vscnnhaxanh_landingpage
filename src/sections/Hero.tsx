@@ -26,7 +26,7 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-emerald-100 shadow-sm mb-4 lg:mb-8 animate-[fadeIn_0.6s_ease-out_0.2s_both]">
             <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-sm font-semibold text-emerald-800">Dịch vụ vệ sinh #1 tại Đà Nẵng</span>
+            <span className="text-sm font-semibold text-emerald-800">Dịch vụ vệ sinh tại Đà Nẵng</span>
           </div>
 
           <h1 className="text-[2rem] sm:text-5xl lg:text-[4rem] font-extrabold text-gray-900 leading-[1.15] tracking-tight mb-4 lg:mb-6">
@@ -45,7 +45,7 @@ export function Hero() {
           <div className="flex items-center gap-2 mb-3 animate-[fadeInUp_0.4s_ease-out_0.3s_both]">
             <span className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 text-[12px] font-bold px-3 py-1 rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shrink-0" />
-              🔥 Còn 3 lịch khảo sát hôm nay — Đặt ngay trước khi hết
+              Khảo sát miễn phí trong ngày — Không cần đặt cọc
             </span>
           </div>
 
@@ -84,7 +84,7 @@ export function Hero() {
             <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
             <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
             <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
-            <span className="ml-0.5"><strong className="text-gray-700">4.9/5</strong> · 500+ khách hàng · Phản hồi trong 30 giây</span>
+            <span className="ml-0.5"><strong className="text-gray-700">4.9/5</strong> · 100+ khách hàng · Phản hồi trong 30 phút</span>
           </p>
 
           {/* Feature highlights */}
@@ -141,9 +141,9 @@ export function Hero() {
           {/* Floating Card 2 - Stats */}
           <div className="absolute top-8 -right-4 md:top-12 md:-right-8 bg-white/90 backdrop-blur-md p-3 md:p-4 rounded-3xl shadow-xl flex items-center gap-3 md:gap-4 border border-white/50 z-30 hover:-translate-y-2 transition-transform cursor-default animate-[fadeInUp_0.6s_ease-out_0.8s_both]">
             <div className="flex -space-x-3">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className={`w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden`}>
-                  <Image src={`https://i.pravatar.cc/100?img=${i + 15}`} alt="Khách hàng" width={40} height={40} className="w-full h-full object-cover" />
+              {['VP', 'NX', 'KH'].map((label) => (
+                <div key={label} className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white bg-emerald-50 text-emerald-700 font-black flex items-center justify-center text-[10px] md:text-xs">
+                  {label}
                 </div>
               ))}
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] md:text-xs">

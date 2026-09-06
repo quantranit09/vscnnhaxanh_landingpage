@@ -42,20 +42,20 @@ export function About() {
                 <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
                   <Trophy size={20} />
                 </div>
-                <div className="font-bold text-gray-900">Top Dịch Vụ<br/><span className="text-sm font-normal text-gray-500">Đà Nẵng & Hội An</span></div>
+                <div className="font-bold text-gray-900">Dịch Vụ Địa Phương<br/><span className="text-sm font-normal text-gray-500">Đà Nẵng & Hội An</span></div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
                   <ShieldCheck size={20} />
                 </div>
-                <div className="font-bold text-gray-900">Chứng Nhận An Toàn<br/><span className="text-sm font-normal text-gray-500">Hóa chất Châu Âu</span></div>
+                <div className="font-bold text-gray-900">Tiêu Chuẩn An Toàn<br/><span className="text-sm font-normal text-gray-500">Hóa chất xanh</span></div>
               </div>
             </div>
             
             <hr className="border-gray-100 mb-8" />
             
             <h3 className="font-bold border-l-4 border-[#2D8B3A] pl-3 mb-4 text-gray-900">
-              Khu vực phục vụ (Đội xe 24/7)
+              Khu vực phục vụ tại Đà Nẵng
             </h3>
             <div className="flex flex-wrap gap-2">
               {districts.map(d => (

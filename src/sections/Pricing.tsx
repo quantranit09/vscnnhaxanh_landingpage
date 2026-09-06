@@ -14,12 +14,12 @@ const pricingData = [
 ]
 
 const partners = [
-  { name: 'TechCom', icon: Building },
-  { name: 'VinaFactory', icon: Factory },
-  { name: 'DaNang Center', icon: Landmark },
-  { name: 'MegaMart', icon: Store },
-  { name: 'Logistics VN', icon: Warehouse },
-  { name: 'City Hospital', icon: Hospital },
+  { name: 'Văn phòng', icon: Building },
+  { name: 'Nhà xưởng', icon: Factory },
+  { name: 'Tòa nhà', icon: Landmark },
+  { name: 'Cửa hàng', icon: Store },
+  { name: 'Kho bãi', icon: Warehouse },
+  { name: 'Cơ sở y tế', icon: Hospital },
 ]
 
 export function Pricing() {
@@ -101,7 +101,7 @@ export function Pricing() {
         {/* Partners Strip */}
         <div className="border-t border-gray-100 pt-16">
           <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8">
-            Được Tin Tưởng Bởi Hơn 50+ Doanh Nghiệp Tại Đà Nẵng
+            Phục Vụ Nhiều Nhóm Khách Hàng Tại Đà Nẵng
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {partners.map((partner, idx) => (

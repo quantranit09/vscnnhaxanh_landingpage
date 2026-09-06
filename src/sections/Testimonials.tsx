@@ -1,6 +1,4 @@
 'use client'
-
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Star, StarHalf } from 'lucide-react'
 import { SectionTitle } from '@/components/ui/SectionTitle'
@@ -11,35 +9,30 @@ const testimonials = [
     role: 'Quản lý VP, Hải Châu',
     content: 'Đội ngũ Nhà Xanh làm việc rất kỹ. Kính văn phòng sáng bóng, thảm giặt xong không bị ẩm mùi. Sẽ ký hợp đồng dài hạn.',
     rating: 5,
-    avatar: 'https://i.pravatar.cc/150?img=47'
   },
   {
     name: 'Anh Quốc Bảo',
     role: 'Chủ nhà, Liên Chiểu',
     content: 'Sạch sẽ, nhanh gọn. Mình mới xây nhà xong bụi kinh khủng mà gọi các bạn qua dọn 1 ngày là vào ở được luôn. Mức giá rất hợp lý.',
     rating: 5,
-    avatar: 'https://i.pravatar.cc/150?img=11'
   },
   {
     name: 'Chị Mai Lan',
     role: 'Chủ shop, Thanh Khê',
     content: 'Hóa chất mùi dễ chịu, không bị hắc như mấy chỗ trước đây. Điểm cộng lớn là các bạn vệ sinh kính mặt tiền cửa hàng cực kỳ sạch.',
     rating: 4.5,
-    avatar: 'https://i.pravatar.cc/150?img=43'
   },
   {
     name: 'Anh Tuấn Anh',
     role: 'Quản lý Kho, Ngũ Hành Sơn',
     content: 'Dọn dẹp kho bãi công nghiệp rất chuyên nghiệp, máy móc hiện đại. Đặc biệt là có xuất hóa đơn VAT đầy đủ, nhanh chóng cho công ty.',
     rating: 5,
-    avatar: 'https://i.pravatar.cc/150?img=12'
   },
   {
     name: 'Cô Tuyết',
     role: 'Cư dân, Sơn Trà',
     content: 'Mấy em làm việc có tâm lắm. Lau dọn từng ngóc ngách, khu vực bếp dính nhiều dầu mỡ đều sạch bong. Lần sau cô lại gọi.',
     rating: 5,
-    avatar: 'https://i.pravatar.cc/150?img=32'
   },
 ]
 
@@ -84,13 +77,9 @@ export function Testimonials() {
                 &ldquo;{review.content}&rdquo;
               </p>
               <div className="flex items-center gap-4 mt-auto">
-                {review.avatar ? (
-                  <Image src={review.avatar} alt={review.name} width={48} height={48} className="w-12 h-12 rounded-full object-cover border-2 border-emerald-50 shadow-sm" unoptimized />
-                ) : (
-                  <div className="w-12 h-12 bg-[#2D8B3A]/10 text-[#2D8B3A] rounded-full flex items-center justify-center font-bold text-lg">
-                    {review.name.charAt(0)}
-                  </div>
-                )}
+                <div className="w-12 h-12 bg-[#2D8B3A]/10 text-[#2D8B3A] rounded-full flex items-center justify-center font-bold text-lg">
+                  {review.name.charAt(0)}
+                </div>
                 <div>
                   <div className="font-bold text-gray-900">{review.name}</div>
                   <div className="text-sm text-gray-500">{review.role}</div>

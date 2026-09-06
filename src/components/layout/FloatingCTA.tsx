@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Phone, ChevronUp } from 'lucide-react'
 import Image from 'next/image'
 import { PhoneLink } from '@/components/ui'
@@ -8,6 +9,11 @@ import { trackZaloClick } from '@/lib/gtag'
 
 export function FloatingCTA() {
   const [showTop, setShowTop] = useState(false)
+  const [showMobileCta, setShowMobileCta] = useState(false)
+  const pathname = usePathname()
+  const normalizedPathname = pathname.replace(/\/$/, '')
+  const isPostConstructionPage = normalizedPathname === '/ve-sinh-sau-xay-dung-da-nang'
+  const phoneHref = isPostConstructionPage ? 'tel:0934997265' : 'tel:+84934997265'
 
   useEffect(() => {
     let ticking = false
@@ -15,6 +21,7 @@ export function FloatingCTA() {
       if (!ticking) {
         requestAnimationFrame(() => {
           setShowTop(window.scrollY > 300)
+          setShowMobileCta(window.scrollY > 220)
           ticking = false
         })
         ticking = true
@@ -74,7 +81,7 @@ export function FloatingCTA() {
             style={{ willChange: 'transform, opacity' }}
           />
           <PhoneLink
-            href="tel:+84934997265"
+            href={phoneHref}
             className="h-[56px] flex items-center bg-[#2D8B3A] border-2 border-white text-white rounded-full
                      shadow-2xl hover:bg-[#1E6B2A] transition-colors relative z-10 px-5 group overflow-hidden"
             aria-label="Gọi ngay"
@@ -85,7 +92,7 @@ export function FloatingCTA() {
             </div>
             <div className="flex flex-col justify-center text-left py-1 ml-1 pr-1">
               <span className="font-black text-[15px] tracking-wide leading-tight">0934.997.265</span>
-              <span className="font-semibold text-[12px] text-white/90 leading-tight mt-0.5">Tư vấn miễn phí • Phản hồi 30s</span>
+              <span className="font-semibold text-[12px] text-white/90 leading-tight mt-0.5">Tư vấn miễn phí • Phản hồi 30 phút</span>
             </div>
           </PhoneLink>
         </div>
@@ -104,39 +111,51 @@ export function FloatingCTA() {
       </button>
 
       {/* ─── MOBILE: “Hiện đang hoạt động” status pill ─── */}
-      <div className="md:hidden fixed bottom-[76px] left-3 z-[51] flex items-center gap-1.5 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg">
+      <div
+        className={`md:hidden fixed bottom-[76px] left-3 z-[51] flex items-center gap-1.5 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg transition-all duration-300 ${
+          showMobileCta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3 pointer-events-none'
+        }`}
+      >
         <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
-        ĐANG PHỤC VỤ
+        ĐANG HỖ TRỢ
       </div>
 
       {/* ─── MOBILE: Fixed Footer Full Width ─── */}
       <div
-        className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-100 p-3 flex gap-3 shadow-[0_-10px_40px_rgba(0,0,0,0.1)]"
+        className={`md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-100 p-3 flex gap-3 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] transition-all duration-300 ${
+          showMobileCta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full pointer-events-none'
+        }`}
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
         <PhoneLink
-          href="tel:+84934997265"
-          className="flex-1 relative overflow-hidden rounded-[18px] bg-gradient-to-l from-[#2D8B3A] to-[#45a352] text-white flex items-center justify-center shadow-lg shadow-[#2D8B3A]/40 active:scale-95 transition-transform"
+          href={phoneHref}
+          className="flex-1 min-h-[52px] relative overflow-hidden rounded-[18px] bg-gradient-to-l from-[#2D8B3A] to-[#45a352] text-white flex items-center justify-center shadow-lg shadow-[#2D8B3A]/40 active:scale-95 transition-transform"
         >
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.4)_50%,transparent_75%)] bg-[length:250%_250%] animate-[shimmer_2s_infinite]" />
           <div className="bg-white/20 p-2 rounded-full mr-2.5 shadow-sm shrink-0">
             <Phone size={18} className="fill-white" />
           </div>
           <div className="flex flex-col items-start leading-tight relative z-10">
-            <span className="font-black text-[14px] tracking-wide drop-shadow-md">0934.997.265 — Gọi Ngay</span>
-            <span className="font-medium text-[11px] text-emerald-100 mt-0.5">Tư vấn miễn phí • Phản hồi 30s</span>
+            <span className="font-black text-[14px] tracking-wide drop-shadow-md">
+              {isPostConstructionPage ? 'Gọi ngay' : '0934.997.265 — Gọi Ngay'}
+            </span>
+            <span className="font-medium text-[11px] text-emerald-100 mt-0.5">
+              {isPostConstructionPage ? '0934 997 265' : 'Tư vấn miễn phí • Phản hồi 30 phút'}
+            </span>
           </div>
         </PhoneLink>
-        <a
-          href="https://zalo.me/0934997265"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={trackZaloClick}
-          className="w-[52px] h-[52px] shrink-0 relative rounded-[18px] overflow-hidden shadow-md active:scale-95 transition-transform"
-          aria-label="Chat Zalo"
-        >
-          <Image src="/images/Logo-Zalo-Arc.webp" alt="Zalo" fill sizes="52px" className="object-cover" />
-        </a>
+        {!isPostConstructionPage && (
+          <a
+            href="https://zalo.me/0934997265"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackZaloClick}
+            className="w-[52px] h-[52px] shrink-0 relative rounded-[18px] overflow-hidden shadow-md active:scale-95 transition-transform"
+            aria-label="Chat Zalo"
+          >
+            <Image src="/images/Logo-Zalo-Arc.webp" alt="Zalo" fill sizes="52px" className="object-cover" />
+          </a>
+        )}
       </div>
     </>
   )

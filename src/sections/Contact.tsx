@@ -25,7 +25,7 @@ const contactInfo = [
   },
   { icon: Phone, title: "Hotline & Zalo", detail: "0934.997.265" },
   { icon: Mail, title: "Email", detail: "canhquan.work@gmail.com" },
-  { icon: Clock, title: "Giờ hoạt động", detail: "Phục vụ 24/7 (Cả Lễ, Tết)" },
+  { icon: Clock, title: "Giờ hoạt động", detail: "Thứ 2-7: 7:00-20:00\nChủ nhật: 8:00-17:00" },
 ];
 
 export function Contact() {
@@ -65,7 +65,7 @@ export function Contact() {
         <SectionTitle
           badge="Liên Hệ Ngay"
           title="Trao Đổi Với Chuyên Viên"
-          subtitle="Khảo sát tận nơi và tư vấn giải pháp làm sạch hoàn toàn miễn phí. Đội ngũ Nhà Xanh sẽ có mặt chỉ sau 30 phút."
+          subtitle="Khảo sát tận nơi và tư vấn giải pháp làm sạch hoàn toàn miễn phí. Đội ngũ Nhà Xanh sẽ phản hồi trong 30 phút."
         />
 
         <div className="grid lg:grid-cols-5 bg-white rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-100">
@@ -101,7 +101,7 @@ export function Contact() {
               </h3>
               <p className="text-emerald-50/80 mb-12 text-sm leading-relaxed max-w-sm">
                 Nhà Xanh tự hào mang đến môi trường sống và làm việc trong lành
-                nhất cho hơn 500+ khách hàng tại Đà Nẵng.
+                nhất cho hơn 100+ khách hàng tại Đà Nẵng.
               </p>
 
               <div className="space-y-8">
@@ -184,7 +184,7 @@ export function Contact() {
                     </span>
                   </a>
                   <p className="text-xs text-emerald-600 font-medium mt-2">
-                    Phản hồi ngay trong 30 giây · Miễn phí 100%
+                    Phản hồi trong 30 phút · Miễn phí 100%
                   </p>
                 </div>
 
@@ -204,7 +204,7 @@ export function Contact() {
                       Để lại số điện thoại
                     </h3>
                     <p className="text-gray-500 text-[14px]">
-                      Chúng tôi gọi lại trong vòng 30 giây. Miễn phí tư vấn.
+                      Chúng tôi gọi lại trong vòng 30 phút. Miễn phí tư vấn.
                     </p>
                   </div>
 
@@ -282,7 +282,7 @@ export function Contact() {
 
                   <p className="text-[14px] text-center text-gray-700 font-semibold mt-5 flex items-center justify-center gap-1.5">
                     <Star className="text-amber-500 fill-amber-500" size={16} />{" "}
-                    500+ khách hàng đã tin dùng dịch vụ
+                    100+ khách hàng đã tin dùng dịch vụ
                   </p>
                   <p className="text-[12px] text-center text-gray-400 font-medium mt-2">
                     Dữ liệu được xử lý an toàn theo{" "}

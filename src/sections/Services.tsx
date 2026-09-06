@@ -160,15 +160,19 @@ export function Services() {
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-white p-6 sm:p-4 sm:pr-6 rounded-2xl shadow-sm border border-emerald-100 max-w-3xl mx-auto">
             <div className="flex -space-x-3 sm:ml-2">
-              <Image src="https://i.pravatar.cc/100?img=1" alt="Nhân viên" width={48} height={48} className="w-12 h-12 rounded-full border-2 border-white object-cover" />
-              <Image src="https://i.pravatar.cc/100?img=5" alt="Nhân viên" width={48} height={48} className="w-12 h-12 rounded-full border-2 border-white object-cover" />
+              <div className="w-12 h-12 rounded-full border-2 border-white bg-emerald-50 text-emerald-700 font-black flex items-center justify-center text-xs">
+                NX
+              </div>
+              <div className="w-12 h-12 rounded-full border-2 border-white bg-emerald-100 text-emerald-800 font-black flex items-center justify-center text-xs">
+                ĐN
+              </div>
               <div className="w-12 h-12 rounded-full border-2 border-white bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-xs">
                 30+
               </div>
             </div>
             <div className="text-left">
               <p className="text-gray-900 font-bold mb-1">Không tìm thấy dịch vụ phù hợp?</p>
-              <p className="text-[#4A5A4A] text-sm">Đội ngũ chuyên viên của chúng tôi luôn sẵn sàng hỗ trợ khảo sát và tư vấn giải pháp đo ni đóng giày cho bạn.</p>
+              <p className="text-[#4A5A4A] text-sm">Đội ngũ chuyên viên luôn sẵn sàng hỗ trợ khảo sát và tư vấn giải pháp phù hợp với mặt bằng của bạn.</p>
             </div>
             <PhoneLink
               href="tel:+84934997265"

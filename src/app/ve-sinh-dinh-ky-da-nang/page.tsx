@@ -6,9 +6,11 @@ import { ServicePage } from '@/components/ServicePage'
 const SERVICE_SLUG = 've-sinh-dinh-ky-da-nang'
 
 export const metadata: Metadata = {
-  title: 'Vệ Sinh Định Kỳ Đà Nẵng | Nhà Xanh – Tiết Kiệm 20%',
+  title: {
+    absolute: 'Vệ Sinh Định Kỳ Đà Nẵng | Nhà Xanh',
+  },
   description:
-    'Dịch vụ vệ sinh định kỳ theo tuần, tháng tại Đà Nẵng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20% so với đặt lẻ. Xuất hóa đơn VAT. Hotline: 0934.997.265',
+    'Vệ sinh định kỳ Đà Nẵng theo tuần, tháng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20%, xuất hóa đơn VAT. Gọi 0934.997.265.',
   alternates: {
     canonical: `https://vscnnhaxanhdanang.com/${SERVICE_SLUG}`,
   },

@@ -6,9 +6,11 @@ import { ServicePage } from '@/components/ServicePage'
 const SERVICE_SLUG = 've-sinh-van-phong-da-nang'
 
 export const metadata: Metadata = {
-  title: 'Vệ Sinh Văn Phòng Đà Nẵng | Nhà Xanh – Từ 12,000đ/m²',
+  title: {
+    absolute: 'Vệ Sinh Văn Phòng Đà Nẵng | Nhà Xanh',
+  },
   description:
-    'Dịch vụ vệ sinh văn phòng chuyên nghiệp tại Đà Nẵng: lau kính, cọ sàn, khử trùng bề mặt, giặt thảm. Phục vụ theo ca hoặc định kỳ. Báo giá trong 30 phút. Hotline: 0934.997.265',
+    'Vệ sinh văn phòng Đà Nẵng: lau kính, cọ sàn, khử trùng, giặt thảm. Phục vụ theo ca hoặc định kỳ, báo giá miễn phí trong 30 phút.',
   alternates: {
     canonical: `https://vscnnhaxanhdanang.com/${SERVICE_SLUG}`,
   },

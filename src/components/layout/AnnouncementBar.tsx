@@ -5,8 +5,8 @@ import { Phone, X, Zap } from 'lucide-react'
 
 const MESSAGES = [
   { icon: '⚡', text: 'Ưu đãi hôm nay: Miễn phí khảo sát tận nơi — Không cần đặt cọc' },
-  { icon: '🕐', text: 'Phản hồi báo giá trong 30 phút · Đội ngũ luôn sẵn sàng 24/7' },
-  { icon: '✅', text: '500+ khách hàng tin dùng · 100% hài lòng mới thanh toán' },
+  { icon: '🕐', text: 'Phản hồi báo giá trong 30 phút · Hỗ trợ khách hàng mỗi ngày' },
+  { icon: '✅', text: '100+ khách hàng tin dùng · 100% hài lòng mới thanh toán' },
 ]
 
 export function AnnouncementBar() {

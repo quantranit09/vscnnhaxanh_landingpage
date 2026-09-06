@@ -29,9 +29,9 @@ export const SERVICES: ServiceData[] = [
     name: 'Vệ Sinh Văn Phòng & Tòa Nhà',
     tagline: 'Môi trường làm việc sạch sẽ — nhân viên năng suất hơn',
     heroKeyword: 'Vệ Sinh Văn Phòng Đà Nẵng',
-    metaTitle: 'Vệ Sinh Văn Phòng Đà Nẵng | Nhà Xanh – Từ 12,000đ/m²',
+    metaTitle: 'Vệ Sinh Văn Phòng Đà Nẵng | Nhà Xanh',
     metaDescription:
-      'Dịch vụ vệ sinh văn phòng chuyên nghiệp tại Đà Nẵng: lau kính, cọ sàn, khử trùng bề mặt, giặt thảm. Phục vụ theo ca hoặc định kỳ. Báo giá trong 30 phút. Hotline: 0934.997.265',
+      'Vệ sinh văn phòng Đà Nẵng: lau kính, cọ sàn, khử trùng, giặt thảm. Phục vụ theo ca hoặc định kỳ, báo giá miễn phí trong 30 phút.',
     ogImage: '/og-image.jpg',
     heroImage: '/images/service-office.webp',
     price: 'Từ 12,000đ',
@@ -39,7 +39,7 @@ export const SERVICES: ServiceData[] = [
     priceDetail:
       'Giá định kỳ theo hợp đồng tháng. Đặt lẻ từ 15,000đ/m². Tòa nhà > 1,000m² có chiết khấu đặc biệt.',
     description:
-      'Nhà Xanh cung cấp dịch vụ vệ sinh văn phòng và tòa nhà chuyên nghiệp tại toàn bộ các quận Đà Nẵng. Đội ngũ 30+ nhân viên được đào tạo bài bản, trang bị máy móc hiện đại: máy hút bụi công nghiệp, máy lau sàn tự động, hóa chất xanh chuẩn Châu Âu. Không làm gián đoạn hoạt động văn phòng — phục vụ theo ca sáng sớm, tối hoặc cuối tuần theo yêu cầu.',
+      'Nhà Xanh cung cấp dịch vụ vệ sinh văn phòng và tòa nhà chuyên nghiệp tại toàn bộ các quận Đà Nẵng. Đội ngũ 30+ nhân viên được đào tạo bài bản, trang bị máy móc hiện đại: máy hút bụi công nghiệp, máy lau sàn tự động, hóa chất xanh an toàn. Không làm gián đoạn hoạt động văn phòng — phục vụ theo ca sáng sớm, tối hoặc cuối tuần theo yêu cầu.',
     benefits: [
       'Lau kính mặt tiền, vách ngăn kính trong suốt',
       'Cọ rửa và đánh bóng sàn đá, gạch, gỗ',
@@ -57,7 +57,7 @@ export const SERVICES: ServiceData[] = [
     faq: [
       { q: 'Vệ sinh văn phòng tại Đà Nẵng giá bao nhiêu?', a: 'Giá tham khảo từ 12,000đ/m²/tháng cho hợp đồng định kỳ, hoặc từ 15,000đ/m² cho đặt lẻ. Giá thực tế phụ thuộc vào diện tích, tần suất và yêu cầu cụ thể. Nhà Xanh khảo sát thực tế và báo giá chính xác miễn phí.' },
       { q: 'Có thể vệ sinh ngoài giờ làm việc không?', a: 'Có. Nhà Xanh phục vụ linh hoạt theo ca: sáng sớm (6h-8h), buổi tối (sau 18h) hoặc cuối tuần — không làm gián đoạn hoạt động văn phòng của bạn.' },
-      { q: 'Hóa chất vệ sinh có an toàn không?', a: 'Toàn bộ hóa chất của Nhà Xanh đạt chuẩn Châu Âu, không độc hại, không mùi hắc, an toàn cho nhân viên văn phòng, trẻ em và vật nuôi.' },
+      { q: 'Hóa chất vệ sinh có an toàn không?', a: 'Toàn bộ hóa chất của Nhà Xanh là hóa chất xanh, không độc hại, không mùi hắc, an toàn cho nhân viên văn phòng, trẻ em và vật nuôi.' },
       { q: 'Nhà Xanh có xuất hóa đơn VAT không?', a: 'Có. Nhà Xanh xuất hóa đơn VAT đầy đủ cho doanh nghiệp. Hợp đồng minh bạch, không phát sinh chi phí ẩn.' },
       { q: 'Vệ sinh văn phòng bao lâu thì xong?', a: 'Tùy diện tích. Văn phòng 200m² thường hoàn thành trong 2-3 giờ. Tòa nhà lớn sẽ chia ca để đảm bảo chất lượng. Nhà Xanh cam kết đúng lịch đã hẹn.' },
     ],
@@ -74,7 +74,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Vệ Sinh Nhà Xưởng & Kho Bãi',
     tagline: 'Xử lý dầu mỡ, bụi công nghiệp — thiết bị chuyên dụng',
     heroKeyword: 'Vệ Sinh Nhà Xưởng Đà Nẵng',
-    metaTitle: 'Vệ Sinh Nhà Xưởng Đà Nẵng | Nhà Xanh – Từ 8,000đ/m²',
+    metaTitle: 'Vệ Sinh Nhà Xưởng Đà Nẵng | Nhà Xanh',
     metaDescription:
       'Vệ sinh nhà xưởng, kho bãi công nghiệp tại Đà Nẵng: xử lý dầu mỡ, bụi, sàn epoxy, máy móc. Thiết bị chuyên dụng. Xuất hóa đơn VAT. Báo giá trong 30 phút.',
     ogImage: '/og-image.jpg',
@@ -118,7 +118,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Vệ Sinh Sau Xây Dựng & Cải Tạo',
     tagline: 'Bàn giao mặt bằng sạch bóng trong 24 giờ',
     heroKeyword: 'Vệ Sinh Sau Xây Dựng Đà Nẵng',
-    metaTitle: 'Vệ Sinh Sau Xây Dựng Đà Nẵng | Nhà Xanh – Từ 15,000đ/m²',
+    metaTitle: 'Vệ Sinh Sau Xây Dựng Đà Nẵng | Nhà Xanh',
     metaDescription:
       'Vệ sinh sau xây dựng, sau cải tạo tại Đà Nẵng: tẩy xi măng, sơn, keo silicon, đánh bóng sàn đá. Bàn giao trong 24h. Từ 15,000đ/m². Hotline: 0934.997.265',
     ogImage: '/og-image.jpg',
@@ -162,9 +162,9 @@ export const SERVICES: ServiceData[] = [
     name: 'Dọn Dẹp Nhà Cửa & Căn Hộ',
     tagline: 'Hóa chất xanh an toàn — cho trẻ em & vật nuôi',
     heroKeyword: 'Dọn Dẹp Nhà Căn Hộ Đà Nẵng',
-    metaTitle: 'Dọn Dẹp Nhà Căn Hộ Đà Nẵng | Nhà Xanh – Từ 1,200,000đ/gói',
+    metaTitle: 'Dọn Dẹp Nhà Căn Hộ Đà Nẵng | Nhà Xanh',
     metaDescription:
-      'Dịch vụ dọn dẹp nhà cửa, căn hộ tại Đà Nẵng: bếp, phòng ngủ, phòng tắm. Hóa chất xanh an toàn cho trẻ em và vật nuôi. Phục vụ theo giờ tại nhà. Hotline: 0934.997.265',
+      'Dọn dẹp nhà, căn hộ Đà Nẵng: bếp, phòng ngủ, phòng tắm. Hóa chất xanh an toàn cho trẻ em, vật nuôi. Hotline 0934.997.265.',
     ogImage: '/og-image.jpg',
     heroImage: '/images/service-apartment.webp',
     price: 'Từ 1,200,000đ',
@@ -172,7 +172,7 @@ export const SERVICES: ServiceData[] = [
     priceDetail:
       'Gói cơ bản 1,200,000đ (đến 70m²). Gói nâng cao có thêm giặt thảm, lau máy lạnh. Đặt theo giờ từ 150,000đ/giờ.',
     description:
-      'Dịch vụ dọn dẹp nhà cửa và căn hộ của Nhà Xanh chú trọng đặc biệt đến sự an toàn cho gia đình bạn. 100% hóa chất đạt chuẩn Châu Âu, không độc hại, an toàn tuyệt đối cho trẻ nhỏ và vật nuôi. Nhân viên nữ chuyên nghiệp, có kiểm tra lý lịch tư pháp, trang phục gọn gàng lịch sự. Phục vụ tại nhà theo giờ hoặc theo gói toàn bộ.',
+      'Dịch vụ dọn dẹp nhà cửa và căn hộ của Nhà Xanh chú trọng đặc biệt đến sự an toàn cho gia đình bạn. Hóa chất xanh, không độc hại, an toàn cho trẻ nhỏ và vật nuôi. Nhân viên nữ chuyên nghiệp, có kiểm tra lý lịch tư pháp, trang phục gọn gàng lịch sự. Phục vụ tại nhà theo giờ hoặc theo gói toàn bộ.',
     benefits: [
       'Vệ sinh bếp: hút mùi, bếp từ, tủ lạnh trong ngoài',
       'Lau dọn phòng ngủ, thay drap giường theo yêu cầu',
@@ -191,7 +191,7 @@ export const SERVICES: ServiceData[] = [
       { q: 'Dọn dẹp nhà tại Đà Nẵng giá bao nhiêu?', a: 'Gói cơ bản từ 1,200,000đ cho căn hộ đến 70m², bao gồm bếp, phòng ngủ, phòng tắm, sàn nhà. Đặt theo giờ từ 150,000đ/giờ. Giá thực tế báo sau khi trao đổi về yêu cầu cụ thể.' },
       { q: 'Nhân viên dọn nhà có đáng tin cậy không?', a: 'Tất cả nhân viên của Nhà Xanh đều qua kiểm tra lý lịch tư pháp, được đào tạo bài bản và mặc đồng phục nhận diện. Chúng tôi chịu trách nhiệm toàn bộ về tài sản trong nhà bạn.' },
       { q: 'Tôi có cần ở nhà khi dọn không?', a: 'Không bắt buộc, nhưng nên có người ở nhà lần đầu tiên. Sau khi quen nhau, nhiều khách hàng để chìa khóa hoặc đặt lịch khi không có ở nhà.' },
-      { q: 'Hóa chất có an toàn cho trẻ em không?', a: '100% an toàn. Hóa chất của Nhà Xanh đạt chuẩn Châu Âu, không độc hại, không gây kích ứng. Trẻ em và vật nuôi có thể vào nhà ngay sau khi dọn xong.' },
+      { q: 'Hóa chất có an toàn cho trẻ em không?', a: 'Có. Hóa chất xanh của Nhà Xanh không độc hại, không gây kích ứng trong điều kiện sử dụng đúng hướng dẫn. Trẻ em và vật nuôi có thể vào nhà sau khi khu vực đã khô thoáng.' },
     ],
     schemaPrice: '1200000',
     testimonial: {
@@ -206,9 +206,9 @@ export const SERVICES: ServiceData[] = [
     name: 'Dịch Vụ Vệ Sinh Định Kỳ',
     tagline: 'Hợp đồng tháng — tiết kiệm 20%, nhân viên cố định',
     heroKeyword: 'Vệ Sinh Định Kỳ Đà Nẵng',
-    metaTitle: 'Vệ Sinh Định Kỳ Đà Nẵng | Nhà Xanh – Tiết Kiệm 20%',
+    metaTitle: 'Vệ Sinh Định Kỳ Đà Nẵng | Nhà Xanh',
     metaDescription:
-      'Dịch vụ vệ sinh định kỳ theo tuần, tháng tại Đà Nẵng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20% so với đặt lẻ. Xuất hóa đơn VAT. Hotline: 0934.997.265',
+      'Vệ sinh định kỳ Đà Nẵng theo tuần, tháng cho văn phòng và nhà cửa. Nhân viên cố định, tiết kiệm 20%, xuất hóa đơn VAT. Gọi 0934.997.265.',
     ogImage: '/og-image.jpg',
     heroImage: '/images/service-periodic-house.webp',
     price: 'Từ 12,000đ',
