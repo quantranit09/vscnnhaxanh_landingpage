@@ -24,7 +24,7 @@ const services = [
       'Xử lý dầu mỡ, bụi công nghiệp và chất thải sản xuất. Thiết bị chuyên dụng cho sàn epoxy, máy móc và kho hàng. Đảm bảo an toàn với hàng hóa.',
     tag: 'Cho doanh nghiệp',
     tagColor: 'bg-blue-600 text-white',
-    image: '/images/service-kitchen-restaurant.webp',
+    image: '/images/service-factory-vietnam.webp',
     slug: 've-sinh-nha-xuong-da-nang',
   },
   {

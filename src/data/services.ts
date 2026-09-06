@@ -78,7 +78,7 @@ export const SERVICES: ServiceData[] = [
     metaDescription:
       'Vệ sinh nhà xưởng, kho bãi công nghiệp tại Đà Nẵng: xử lý dầu mỡ, bụi, sàn epoxy, máy móc. Thiết bị chuyên dụng. Xuất hóa đơn VAT. Báo giá trong 30 phút.',
     ogImage: '/og-image.jpg',
-    heroImage: '/images/service-kitchen-restaurant.webp',
+    heroImage: '/images/service-factory-vietnam.webp',
     price: 'Từ 8,000đ',
     priceUnit: '/m²',
     priceDetail:
