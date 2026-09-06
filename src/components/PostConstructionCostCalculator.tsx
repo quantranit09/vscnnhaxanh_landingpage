@@ -141,7 +141,7 @@ export function PostConstructionCostCalculator() {
   const handleAreaNext = () => {
     markStarted();
     if (areaNumber <= 0) {
-      setAreaError("Vui lòng nhập diện tích ước tính để tiếp tục.");
+      setAreaError("Vui lòng nhập diện tích sàn ước tính để tiếp tục.");
       return;
     }
     setAreaError("");
@@ -243,7 +243,7 @@ export function PostConstructionCostCalculator() {
               {step === 1 && (
                 <div>
                   <label htmlFor="construction-area" className="block text-base font-extrabold text-gray-900">
-                    Diện tích công trình khoảng bao nhiêu?
+                    Diện tích sàn khoảng bao nhiêu?
                   </label>
                   <div className="relative mt-4">
                     <input
@@ -487,7 +487,7 @@ export function PostConstructionCostCalculator() {
               <h3 className="text-lg font-extrabold">Vì sao giá có thể khác nhau?</h3>
             </div>
             <ul className="mt-4 space-y-3 text-sm leading-relaxed">
-              <li>Diện tích càng lớn thì tổng chi phí thay đổi theo số m² thực tế.</li>
+              <li>Diện tích sàn càng lớn thì tổng chi phí thay đổi theo số m² thực tế.</li>
               <li>Sơn, xi măng, keo silicon bám nhiều cần thêm thời gian và hóa chất xử lý.</li>
               <li>Nhiều kính, nội thất, sân vườn hoặc khu vực ngoài trời làm tăng khối lượng việc.</li>
               <li>Hồ bơi và hạng mục đặc biệt cần khảo sát riêng để tránh báo thiếu.</li>

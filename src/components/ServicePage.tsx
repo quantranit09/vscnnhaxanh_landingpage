@@ -120,7 +120,7 @@ export function ServicePage({ service }: { service: ServiceData }) {
               {isPostConstruction ? (
                 <>
                   <strong className="text-emerald-800">Giá từ 15.000đ/m²</strong>
-                  {' '}· Khảo sát miễn phí · Báo giá trước khi thi công. Giá chính thức phụ thuộc diện tích và tình trạng thực tế.
+                  {' '}· Khảo sát miễn phí · Báo giá trước khi thi công. Giá chính thức phụ thuộc diện tích sàn và tình trạng thực tế.
                 </>
               ) : (
                 <>
